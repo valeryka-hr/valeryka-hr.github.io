@@ -536,3 +536,27 @@ picture{display:contents}
 .card--feature .card__foot .price::before{content:"✓";margin-right:6px;color:#5b3f86}
 /* clip (not hidden) so focus/scrollIntoView can never shift these containers */
 @supports (overflow:clip){.hero,.pain,.card,.contact,.note-split{overflow:clip}}
+
+/* ---------- v4: real cases, proof strip, reviews ---------- */
+.proof{margin:0 0 28px;padding:26px 32px;border:1px solid var(--hair);border-radius:22px;background:linear-gradient(120deg,rgba(205,182,246,.06),rgba(255,255,255,.01))}
+.proof__label{font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--lilac);margin-bottom:18px}
+.proof__label span{color:var(--faint);font-weight:500;letter-spacing:.12em;margin-left:8px}
+.proof__row{display:grid;grid-template-columns:repeat(4,1fr)}
+.proof__item{display:flex;flex-direction:column;gap:8px;padding:0 24px;border-left:1px solid var(--hair)}
+.proof__item:first-child{padding-left:0;border-left:0}
+.proof__item b{font:400 clamp(30px,3vw,42px)/1 var(--serif);letter-spacing:-.01em;color:var(--ink);white-space:nowrap}
+.proof__item b i{font-size:.62em;color:var(--lilac)}
+.proof__item span{font-size:13px;line-height:1.45;color:var(--muted);max-width:230px}
+.case__co{font:500 15px/1.2 var(--sans);color:var(--ink)}
+.case__flow--3{grid-template-columns:repeat(3,1fr)}
+.cases__own{margin-top:22px;font-size:14px;color:var(--muted);display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+.cases__own span{font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--lilac);border:1px solid var(--hair-2);border-radius:999px;padding:4px 10px;white-space:nowrap}
+.reviews-head{margin-top:clamp(56px,7vw,90px)}
+.reviews-head + .reviews{margin-top:22px}
+.review{border:1px solid var(--hair);background:linear-gradient(140deg,rgba(255,255,255,.035),rgba(255,255,255,.01));display:flex;flex-direction:column;justify-content:space-between}
+.review blockquote{font-size:clamp(19px,1.6vw,22px);color:var(--ink);margin:0}
+.review figcaption b{color:var(--lilac)}
+@media (max-width:1100px){.proof__row{grid-template-columns:repeat(2,1fr);gap:22px 0}.proof__item:nth-child(3){padding-left:0;border-left:0}}
+@media (max-width:640px){.proof{padding:22px}.proof__row{grid-template-columns:1fr;gap:18px}.proof__item{padding:0;border-left:0}.proof__item span{max-width:none}}
+@media (max-width:1100px){.case__flow--3{grid-template-columns:1fr 1fr}.case__flow--3>div:last-child{grid-column:1/-1}}
+@media (max-width:600px){.case__flow--3{grid-template-columns:1fr}}
