@@ -933,3 +933,4 @@ details p{font-size:17.5px}
 .brand__text small{font-size:13px}
 .pipe__steps span{font-size:14px}
 @media (max-width:600px){.node small{font-size:12.5px;letter-spacing:.04em}}
+.stats dd{hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
