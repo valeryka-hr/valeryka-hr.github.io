@@ -25,15 +25,15 @@ void main(){
   vec2 q=vec2(fbm(p*1.4+T),fbm(p*1.4+vec2(5.2,1.3)-T));
   vec2 w=vec2(fbm(p*1.2+2.2*q+vec2(1.7,9.2)+T*1.3),fbm(p*1.2+2.2*q+vec2(8.3,2.8)-T));
   float f=fbm(p*1.1+2.6*w+(m-.5)*.25);
-  vec3 c0=vec3(.071,.051,.094);  /* ground  #120d18 */
-  vec3 c1=vec3(.227,.129,.282);  /* plum    #3a2148 */
-  vec3 c2=vec3(.545,.376,.690);  /* violet  */
-  vec3 c3=vec3(.725,.541,.663);  /* rose    #b98aa9 */
-  vec3 c4=vec3(.616,.690,1.0);   /* blue, pointwise */
-  vec3 col=mix(c0,c1,smoothstep(.15,.65,f));
-  col=mix(col,c2,smoothstep(.55,.95,f*length(q))*.75);
-  col=mix(col,c3,smoothstep(.62,.9,w.x)*.35);
-  col=mix(col,c4,smoothstep(.78,.98,w.y*f)*.18);
+  vec3 c0=vec3(.035,.039,.094);  /* near-black base #090a18 */
+  vec3 cN=vec3(.075,.118,.330);  /* ink-blue #111a46 */
+  vec3 cV=vec3(.165,.086,.314);  /* deep violet #2a1650 */
+  vec3 c2=vec3(.470,.400,.760);  /* lilac-violet */
+  vec3 c4=vec3(.420,.540,1.0);   /* blue light */
+  vec3 c1=mix(cN,cV,smoothstep(.35,.85,uv.x*.55+uv.y*.35+(q.x-.5)*.6+.08*sin(T*3.+p.y)));
+  vec3 col=mix(c0,c1,smoothstep(.12,.62,f));
+  col=mix(col,c2,smoothstep(.58,.95,f*length(q))*.6);
+  col=mix(col,c4,smoothstep(.7,.98,w.y*f)*.28);
   /* keep the copy side dark, let colour live behind the portrait */
   col*=mix(.55,1.15,smoothstep(.05,.85,uv.x));
   col*=mix(.6,1.,smoothstep(0.,.5,uv.y));

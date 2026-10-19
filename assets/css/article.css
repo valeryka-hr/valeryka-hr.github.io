@@ -80,3 +80,5 @@
 .art__table thead th{font-size:13px;letter-spacing:.08em}
 @media (max-width:760px){.art__body{font-size:18px}}
 @media (max-width:600px){.art-page .header__cta{font-size:14px}}
+.art-cta--final{background:radial-gradient(70% 90% at 100% 0%,rgba(42,22,80,.7),transparent 65%),linear-gradient(150deg,rgba(17,26,70,.7),rgba(20,16,44,.72))}
+.art-cta--mid{background:linear-gradient(120deg,rgba(110,140,255,.08),rgba(190,130,255,.06))}
