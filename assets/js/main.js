@@ -1,7 +1,6 @@
 /* Валерия Кравченко — interactions.
-   Architecture borrowed from Scrolltide SELENE: one rAF loop drives everything scroll-linked
-   (Lenis smooth scroll → each effect reads its own rect and writes styles directly), plus an
-   IntersectionObserver that adds .is-in to [data-reveal] once. */
+   Calm motion: Lenis smooth scroll + one rAF loop (header state, floating CTA) and an
+   IntersectionObserver that adds .is-in to [data-reveal] / #route once. No scroll-jacking, no parallax. */
 (function () {
   'use strict';
   const $ = (s, r = document) => r.querySelector(s);
@@ -10,7 +9,6 @@
   const lerp = (a, b, t) => a + (b - a) * t;
   const ease = (t) => 1 - Math.pow(1 - t, 3);
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const pinProgress = (el) => { const r = el.getBoundingClientRect(); return clamp(-r.top / Math.max(1, r.height - innerHeight)); };
 
   /* ---------- smooth scroll ---------- */
   let lenis = null;
@@ -51,10 +49,17 @@
 
   /* ---------- service → form topic ---------- */
   const topic = $('#f-topic');
-  $$('[data-request]').forEach((el) => el.addEventListener('click', () => {
-    const val = el.dataset.request;
+  function setTopic(val) {
+    if (!val || !topic) return;
     if (![...topic.options].some((o) => o.value === val)) topic.add(new Option(val, val));
     topic.value = val;
+  }
+  // /?topic=…#contact (links from article pages) preselects the form topic
+  try { const t = new URLSearchParams(location.search).get('topic'); if (t) setTopic(t.slice(0, 60)); } catch (e) {}
+  $$('[data-request]').forEach((el) => el.addEventListener('click', () => {
+    setTopic(el.dataset.request);
+    const msg = $('#f-message');
+    if (el.dataset.message && msg && !msg.value.trim()) msg.value = el.dataset.message;
     topic.closest('.field').animate?.([{ boxShadow: '0 0 0 0 rgba(205,182,246,0)' }, { boxShadow: '0 0 0 6px rgba(205,182,246,.25)' }, { boxShadow: '0 0 0 0 rgba(205,182,246,0)' }], { duration: 1200, delay: 700 });
     scrollToEl($('#contact'));
     setTimeout(() => $('#f-name').focus({ preventScroll: true }), reduce ? 0 : 1300);
@@ -65,7 +70,7 @@
     entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); } });
   }, { rootMargin: '0px 0px -8% 0px' });
   // stagger siblings inside grids
-  $$('.pains, .cases__list, .cards, .pillars, .faq__list, .reviews, .tg-cards').forEach((g) => {
+  $$('.pains, .cases__list, .cards, .pillars, .faq__list, .reviews, .tg-cards, .bento, .reads__grid').forEach((g) => {
     $$('[data-reveal]', g).forEach((el, i) => el.style.setProperty('--rd', (i % 6) * 0.08 + 's'));
   });
   $$('[data-reveal]').forEach((el) => io.observe(el));
@@ -76,59 +81,17 @@
     el.style.setProperty('--mx', e.clientX - r.left + 'px'); el.style.setProperty('--my', e.clientY - r.top + 'px');
   }));
 
-  /* ---------- hover list: tap to open on touch ---------- */
-  $$('.hlist__row').forEach((row) => {
-    row.addEventListener('click', () => { $$('.hlist__row').forEach((r) => r !== row && r.classList.remove('is-open')); row.classList.toggle('is-open'); });
-    row.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); row.click(); } });
-  });
-
   /* ---------- scroll-linked effects ---------- */
   const header = $('.header'), hero = $('.hero'), floatCta = $('.float-cta'), contact = $('#contact');
-  const parallax = $$('[data-parallax]').map((n) => ({ el: n.tagName === 'IMG' ? n : n.querySelector('img'), host: n, k: parseFloat(n.dataset.parallax) || 0.1 }));
-
-  // Focus Reveal
-  const focus = $('.focus'), words = $$('.fw'), frame = $('.focus__frame'), focusPin = $('.focus__pin');
-  let lastWord = -2;
-  function updateFocus() {
-    if (!focus) return;
-    const p = pinProgress(focus);
-    const idx = Math.min(words.length - 1, Math.floor(p * (words.length + 0.6)) - 0);
-    if (idx === lastWord) return;
-    lastWord = idx;
-    words.forEach((w, i) => w.classList.toggle('is-sharp', i <= idx));
-    if (idx < 0 || p >= 0.999) { frame.classList.remove('on'); return; }
-    const w = words[idx], pr = focusPin.getBoundingClientRect(), r = w.getBoundingClientRect();
-    frame.style.width = r.width + 'px'; frame.style.height = r.height + 'px';
-    frame.style.transform = `translate(${r.left - pr.left}px, ${r.top - pr.top}px)`;
-    frame.classList.add('on');
+  // Steps: light the stages once the route enters the viewport
+  const route = $('#route');
+  if (route) {
+    if (reduce || !('IntersectionObserver' in window)) route.classList.add('is-in');
+    else { const ro = new IntersectionObserver((es) => es.forEach((en) => { if (en.isIntersecting) { route.classList.add('is-in'); ro.disconnect(); } }), { rootMargin: '0px 0px -20% 0px' }); ro.observe(route); }
   }
-
-  // Zoom Reveal
-  const zoom = $('.zoom'), zMedia = $('.zoom__media'), zWords = $$('.zoom__w'), zCap = $('.zoom__caption');
-  let zBase = null;
-  function measureZoom() { if (!zMedia) return; zMedia.style.width = ''; zMedia.style.height = ''; const r = zMedia.getBoundingClientRect(); zBase = { w: r.width, h: r.height }; }
-  function updateZoom() {
-    if (!zoom || reduce) return;
-    if (!zBase) measureZoom();
-    const p = pinProgress(zoom);
-    const t = ease(clamp(p / 0.62));
-    zMedia.style.width = lerp(zBase.w, innerWidth, t) + 'px';
-    zMedia.style.height = lerp(zBase.h, innerHeight, t) + 'px';
-    zMedia.style.borderRadius = lerp(zBase.h / 2, 0, t) + 'px';
-    zMedia.style.setProperty('--shade', clamp((p - 0.5) / 0.25).toFixed(3));
-    zWords.forEach((w) => { w.style.opacity = (1 - clamp((t - 0.55) / 0.3)).toFixed(3); });
-    zCap.classList.toggle('on', p > 0.68);
-  }
-
-  // Route ink (SELENE "trajectory" technique)
-  const route = $('#route'), routeInk = $('.route__ink'), routeSteps = $$('.route__steps li');
-  function updateRoute() {
-    if (!route || reduce) return;
-    const r = route.getBoundingClientRect();
-    const p = clamp((innerHeight * 0.85 - r.top) / (innerHeight * 0.55));
-    routeInk.style.setProperty('--ink', (1 - p).toFixed(4));
-    routeSteps.forEach((li, i) => li.classList.toggle('on', p >= i / routeSteps.length + 0.02));
-  }
+  // flow rails: the glowing point travels the rail's own height
+  const sizeRails = () => $$('.rail').forEach((r) => r.style.setProperty('--rail-h', Math.max(0, r.offsetHeight - 22) + 'px'));
+  sizeRails();
 
   let lastY = -1;
   function frameTick() {
@@ -139,22 +102,11 @@
       const heroH = hero.offsetHeight;
       const cr = contact.getBoundingClientRect();
       floatCta.classList.toggle('show', y > heroH * 0.7 && cr.top > innerHeight * 0.6);
-      if (!reduce) {
-        parallax.forEach(({ el, host, k }) => {
-          const r = host.getBoundingClientRect();
-          if (r.bottom < -100 || r.top > innerHeight + 100) return;
-          const lim = r.height * 0.05;
-          const off = clamp((r.top + r.height / 2 - innerHeight / 2) * -k, -lim, lim);
-          el.style.transform = `translate3d(0, ${off.toFixed(1)}px, 0)`;
-        });
-      }
-      updateFocus(); updateZoom(); updateRoute();
     }
   }
   function loop(time) { if (lenis) lenis.raf(time); frameTick(); requestAnimationFrame(loop); }
   requestAnimationFrame(loop);
-  window.addEventListener('resize', () => { zBase = null; lastY = -1; lastWord = -2; }, { passive: true });
-  if (reduce) { words.forEach((w) => w.classList.add('is-sharp')); routeSteps.forEach((li) => li.classList.add('on')); if (zCap) zCap.classList.add('on'); }
+  window.addEventListener('resize', () => { lastY = -1; sizeRails(); }, { passive: true });
 
   /* ---------- form ---------- */
   const form = $('#leadForm'), status = $('#formStatus'), submit = $('.form__submit'), label = $('.form__label');
