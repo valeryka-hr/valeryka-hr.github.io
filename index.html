@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="preload" as="image" type="image/avif" imagesrcset="assets/img/hero-560.avif 560w, assets/img/hero-960.avif 960w" imagesizes="(max-width: 900px) 62vw, 40vw" fetchpriority="high">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css?v=20261019b">
 </head>
 <body>
 <a class="skip" href="#main">К содержимому</a>
@@ -31,11 +31,12 @@
       <span class="brand__text"><strong>Валерия Кравченко</strong><small>Бизнес-архитектор</small></span>
     </a>
     <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="#situations">Задачи</a>
       <a href="#approach">Подход</a>
       <a href="#cases">Проекты</a>
       <a href="#ai">ИИ-решения</a>
-      <a href="#services">Форматы</a>
       <a href="#about">Обо мне</a>
+      <a href="#services">Форматы</a>
       <a href="#speaker">Выступления</a>
       <a href="#contact" class="nav__mobile-cta">Обсудить задачу ↗</a>
     </nav>
@@ -95,7 +96,7 @@
       <h2 id="sit-title" data-reveal>Узнаёте свой <em>рабочий день?</em></h2>
       <p class="head__aside" data-reveal>Когда усилий всё больше, а ясности всё меньше, пора посмотреть, как устроена сама работа.</p>
     </div>
-    <div class="pains">
+    <div class="pains" data-m-carousel="Ситуации">
       <article class="pain" data-reveal><span class="pain__n">01 · Управление</span><h3>Без вас ничего не решается</h3><p>Вы — главный диспетчер. Согласования, вопросы и исключения снова возвращаются к вам.</p></article>
       <article class="pain" data-reveal><span class="pain__n">02 · Процессы</span><h3>Задачи теряются между отделами</h3><p>Каждый делает свою часть в своей логике. Кто отвечает за общий результат — до конца не понятно.</p></article>
       <article class="pain" data-reveal><span class="pain__n">03 · Команда</span><h3>Все заняты. Результат буксует</h3><p>Люди работают на пределе, сроки сдвигаются, одни и те же ошибки повторяются.</p></article>
@@ -126,7 +127,7 @@
       <p class="eyebrow" data-reveal>Мой подход</p>
       <h2 id="ap-title" data-reveal>Вижу связи. Нахожу причину. <em>Собираю систему.</em></h2>
       <p class="approach__intro" data-reveal>За одной и той же жалобой «люди не справляются» могут стоять разные причины. Я смотрю, как связаны цели, роли, процессы и инструменты — и что мешает им работать вместе.</p>
-      <ol class="pillars">
+      <ol class="pillars" data-m-more="Три опоры: люди, процессы, ИИ">
         <li data-reveal><span>01</span><div><strong>Люди</strong><p>Роли, ответственность, управленческие навыки, обучение.</p></div></li>
         <li data-reveal><span>02</span><div><strong>Процессы</strong><p>Последовательность работы, передача задач, стандарты качества, контроль.</p></div></li>
         <li data-reveal><span>03</span><div><strong>ИИ</strong><p>Конкретные задачи для цифровых помощников, правила использования, проверка результата.</p></div></li>
@@ -147,7 +148,7 @@
     </div>
   </div>
   <div class="wrap">
-    <div class="causes" data-reveal>
+    <div class="causes" data-reveal data-m-more="Как ищу причину — пример">
       <figure class="ill causes__ill"><img src="assets/img/ill/ill-poteri-640.webp" srcset="assets/img/ill/ill-poteri-640.webp 640w, assets/img/ill/ill-poteri-1024.webp 1024w" sizes="(max-width:1200px) 100vw, 1140px" width="1024" height="576" alt="Иллюстрация: прохудившиеся трубы и лупа — где утекают деньги" loading="lazy" decoding="async"><figcaption>Где теряются деньги</figcaption></figure>
       <p class="causes__label">Как ищу причину — на примере жалобы «люди не справляются»</p>
       <div class="causes__map">
@@ -182,11 +183,11 @@
         <div class="proof__item"><b>25+ <i>лет</i></b><span>в HR, обучении и развитии бизнеса</span></div>
       </div>
     </div>
-    <div class="cases__list">
+    <div class="cases__list" data-m-carousel="Проекты">
       <article class="case case--lead" data-reveal><span class="bm" aria-hidden="true">Большой проект · 2005–2006</span>
         <div class="case__meta"><span class="case__no">Большой проект</span><span class="case__logo case__logo--word">ТОПСЕРВИС</span><span class="case__type">Оптовая торговля фото- и электротоварами · в роли менеджера по развитию персонала · 2005–2006</span></div>
         <h3 class="case__title">Обучение и развитие персонала, которые окупились <em>1850% годовых</em></h3>
-        <dl class="case__flow case__flow--3">
+        <dl class="case__flow case__flow--3" data-m-more="Подробнее о проекте">
           <div><dt>Ситуация</dt><dd>Московская оптовая компания: за время проекта — со 100 до 250 сотрудников, дилерская сеть — 540 компаний в 76 городах. Между отделами — склоки: бухгалтерия предъявляет претензии продажам за документы, менеджеры плохо знают продукт, аттестация — формальность для повышения зарплаты.</dd></div>
           <div><dt>Что сделано</dt><dd>Цели компании разложены до планов работ сотрудников. Аттестация с оценкой 360° и мотивационным интервью, внутреннее и внешнее обучение, тренинги и семинары, кадровый резерв, подготовка внутренних преподавателей, оценка эффективности обучения.</dd></div>
           <div><dt>Результат</dt><dd><b class="case__big">ROI 1850<i>%</i></b> годовых — соотношение вложений в проект за 8 месяцев и полученной выгоды, по отчёту по проекту. На совещаниях топ-менеджмента перестала подниматься постоянная проблема претензий одних отделов к другим, выросла управляемость.</dd></div>
@@ -195,7 +196,7 @@
       <article class="case" data-reveal><span class="bm" aria-hidden="true">2024–2025</span>
         <div class="case__meta"><span class="case__no">Проект 01</span><span class="case__logo"><img src="assets/img/logo-vhm.png" width="143" height="22" alt="ВНИИХОЛОДМАШ" loading="lazy"></span><span class="case__type">Консалтинговый проект · 11.2024–03.2025</span></div>
         <h3 class="case__title">Команда изменений для научно-производственного предприятия</h3>
-        <dl class="case__flow case__flow--3">
+        <dl class="case__flow case__flow--3" data-m-more="Подробнее о проекте">
           <div><dt>Задача</dt><dd>Найти инициативных сотрудников и наладить взаимодействие между подразделениями.</dd></div>
           <div><dt>Что сделано</dt><dd>Диагностика процессов и стратегическая сессия, отбор команды изменений из 14 человек, тренинги по коммуникациям, конфликтам и переговорам для двух управленческих групп, индивидуальная работа с руководителем.</dd></div>
           <div><dt>Результат</dt><dd>Одна из групп сложилась в рабочую команду. Выяснилось, что за «конфликтами» стоят неудобные процессы. Разработаны механизм загрузки механического цеха и испытательных стендов и система «Предложи и реализуй» для инициатив сотрудников.</dd></div>
@@ -204,7 +205,7 @@
       <article class="case" data-reveal><span class="bm" aria-hidden="true">2007–2008</span>
         <div class="case__meta"><span class="case__no">Проект 02</span><span class="case__logo"><img src="assets/img/logo-grossmart.png" width="128" height="14" alt="Гроссмарт" loading="lazy"><small>Элекскор</small></span><span class="case__type">В роли зам. директора по персоналу · 2007–2008</span></div>
         <h3 class="case__title">Обучение и подбор для сети, которая росла быстрее, чем готовились люди</h3>
-        <dl class="case__flow case__flow--3">
+        <dl class="case__flow case__flow--3" data-m-more="Подробнее о проекте">
           <div><dt>Ситуация</dt><dd>Федеральная продуктовая сеть в 14 регионах: за полгода — со 150 до 200 магазинов и до 10 000 сотрудников.</dd></div>
           <div><dt>Что сделано</dt><dd>Обучение и подбор объединены в один отдел, каскад внутренних тренеров и наставничество, аттестация по чек-листу «тайного покупателя», кадровый резерв, круглые столы для управляющих.</dd></div>
           <div><dt>Результат</dt><dd>Текучесть значительно снизилась, в учебный центр выстраивались очереди на аттестацию. Рост эффективности подбора и обучения подтвердили оценка и торговый блок — основной заказчик обучения.</dd></div>
@@ -213,7 +214,7 @@
       <article class="case" data-reveal><span class="bm" aria-hidden="true">2003–2005</span>
         <div class="case__meta"><span class="case__no">Проект 03</span><span class="case__logo case__logo--word">Планета Менеджмент</span><span class="case__type">«Гастроном-Эконом», «Компас» · в роли руководителя учебного центра · 2003–2005</span></div>
         <h3 class="case__title">Учебный центр с нуля для сети из 14 магазинов</h3>
-        <dl class="case__flow case__flow--3">
+        <dl class="case__flow case__flow--3" data-m-more="Подробнее о проекте">
           <div><dt>Ситуация</dt><dd>14 дискаунтеров, 1000 сотрудников, системного обучения нет.</dd></div>
           <div><dt>Что сделано</dt><dd>Стандарты работы с покупателем, каскадное обучение через внутренних тренеров, регулярные занятия прямо в магазинах, чек-листы, «тайный покупатель» и рейтинг магазинов.</dd></div>
           <div><dt>Результат</dt><dd>Через полтора года, по опросу постоянных покупателей, качество обслуживания выросло на 81% в среднем по сети. Ежемесячная текучесть торгового персонала — с 9,71% до 4,2%.</dd></div>
@@ -221,6 +222,16 @@
       </article>
     </div>
   </div>
+  <div class="wrap">
+    <div class="reviews-head" data-reveal><p class="eyebrow">Отзывы участников</p></div>
+    <div class="reviews" data-m-more="Ещё отзывы" data-m-after>
+      <figure class="review" data-reveal><blockquote>«Думаю, что управляющие стали более собранными, выдержанными. Планируют свое рабочее время, ставят приоритеты. Результат виден.»</blockquote><figcaption><b>А. К.</b><span>директор региона «Москва», Гроссмарт · 2007–2008</span></figcaption></figure>
+      <figure class="review" data-reveal><blockquote>«Тренинг, живой, яркий и результативный. …понять, что в мире существуют не только два мнения — Ваше и неправильное.»</blockquote><figcaption><b>Е. К.</b><span>управляющий магазином, Гроссмарт · 2007–2008</span></figcaption></figure>
+      <figure class="review" data-reveal><blockquote>«Я провел переговоры с применением различных техник и методик коммуникативности и делового общения. В результате заново удалось наладить хорошие отношения.»</blockquote><figcaption><b>А. К.</b><span>участник тренинга «Эффективные коммуникации», ТОПСЕРВИС · 2005</span></figcaption></figure>
+      <figure class="review" data-reveal><blockquote>«В работе стала применять методику планирования, легко стало говорить «нет», что главное, обосновано, аргументировано.»</blockquote><figcaption><b>С. М.</b><span>участница тренинга по тайм-менеджменту, ТОПСЕРВИС · 2005</span></figcaption></figure>
+    </div>
+  </div>
+  <div class="wrap mid-cta" data-reveal><a class="btn btn--primary" href="#contact">Обсудить задачу <span class="btn__dot" aria-hidden="true">↗</span></a><p>Расскажите, что буксует у вас, — подскажу, с чего начать.</p></div>
 </section>
 
 <!-- ============ ИИ-РЕШЕНИЯ ============ -->
@@ -232,7 +243,7 @@
       <h2 id="ai-title" data-reveal>Сначала порядок в процессах. <em>Потом — ИИ.</em></h2>
       <p class="head__aside" data-reveal>Ставлю ИИ туда, где он действительно экономит время и деньги. Одно решение работает у клиента, одно — мой рабочий инструмент, одно в обкатке. Похожее соберу под ваш бизнес на заказ.</p>
     </div>
-    <div class="bento">
+    <div class="bento" data-m-carousel="ИИ-решения">
       <article class="tile tile--lead glass" data-reveal><span class="bm" aria-hidden="true">Работает у клиента</span>
         <figure class="ill tile__ill" aria-hidden="true"><img src="assets/img/ill/ill-lidorub-640.webp" srcset="assets/img/ill/ill-lidorub-640.webp 640w, assets/img/ill/ill-lidorub-1024.webp 1024w" sizes="(max-width:760px) 100vw, 640px" width="1024" height="576" alt="" loading="lazy" decoding="async"></figure>
         <div class="tile__body">
@@ -247,15 +258,15 @@
           <p class="stats__note">По отчёту о работе бота, выборка — 62 диалога.</p>
           <button class="tile__btn" type="button" data-request="ИИ-решения" data-message="Хочу обсудить нейропродавца для нашего бизнеса.">Обсудить нейропродавца <span aria-hidden="true">↗</span></button>
         </div>
-        <div class="tile__flow" aria-label="Как работает нейропродавец"><ol class="rail"><li><b>Клиент пишет</b><span>в чат сайта или Telegram — даже ночью</span></li><li><b>Ответ за секунды</b><span>клиент не уходит к конкуренту</span></li><li><b>Уточняющие вопросы</b><span>зачем, тираж, бюджет, сроки</span></li><li><b>Подбор по каталогу</b><span>и по базе частых вопросов</span></li><li><b>Допродажа</b><span>упаковка, макет, срочная доставка</span></li><li><b>Контакты для CRM</b><span>вся история на виду</span></li><li><b>Передача менеджеру</b><span>горячий клиент с понятной задачей</span></li></ol></div>
+        <div class="tile__flow" aria-label="Как работает нейропродавец" data-m-more="Как это работает"><ol class="rail"><li><b>Клиент пишет</b><span>в чат сайта или Telegram — даже ночью</span></li><li><b>Ответ за секунды</b><span>клиент не уходит к конкуренту</span></li><li><b>Уточняющие вопросы</b><span>зачем, тираж, бюджет, сроки</span></li><li><b>Подбор по каталогу</b><span>и по базе частых вопросов</span></li><li><b>Допродажа</b><span>упаковка, макет, срочная доставка</span></li><li><b>Контакты для CRM</b><span>вся история на виду</span></li><li><b>Передача менеджеру</b><span>горячий клиент с понятной задачей</span></li></ol></div>
       </article>
       <article class="tile tile--diag" data-reveal><span class="bm" aria-hidden="true">В обкатке</span>
         <figure class="ill tile__ill" aria-hidden="true"><img src="assets/img/ill/ill-diagnost-640.webp" srcset="assets/img/ill/ill-diagnost-640.webp 640w, assets/img/ill/ill-diagnost-1024.webp 1024w" sizes="(max-width:760px) 100vw, 640px" width="1024" height="576" alt="" loading="lazy" decoding="async"></figure>
         <span class="tile__tag tile__tag--test">В обкатке</span>
         <h3>Бот-диагност</h3>
         <p>Сейчас тестирую. За несколько минут переписки бот расспрашивает о ситуации, находит, где в бизнесе теряются деньги — привлечение заявок, процессы, управление людьми или готовность к ИИ, — и предлагает первые шаги.</p>
-        <p>Похожего бота-диагноста соберу на заказ под ваш бизнес: ваши вопросы, ваша логика, запись к вам на консультацию.</p>
-        <div class="tile__flow" aria-label="Как проходит экспресс-диагностика"><ol class="rail"><li><b>Знакомство</b><span>как обращаться, в каком тоне</span></li><li><b>Рассказ о ситуации</b><span>своими словами, без терминов</span></li><li><b>Корень проблемы</b><span>видно, что лечить первым</span></li><li><b>Где теряются деньги</b><span>и что будет, если не менять</span></li><li><b>Первые шаги на 7 дней</b><span>польза сразу</span></li><li><b>Запись на диагностику</b><span>следующий шаг</span></li></ol></div>
+        <p data-m-more="Соберу такого для вас" data-m-after>Похожего бота-диагноста соберу на заказ под ваш бизнес: ваши вопросы, ваша логика, запись к вам на консультацию.</p>
+        <div class="tile__flow" aria-label="Как проходит экспресс-диагностика" data-m-more="Как это работает"><ol class="rail"><li><b>Знакомство</b><span>как обращаться, в каком тоне</span></li><li><b>Рассказ о ситуации</b><span>своими словами, без терминов</span></li><li><b>Корень проблемы</b><span>видно, что лечить первым</span></li><li><b>Где теряются деньги</b><span>и что будет, если не менять</span></li><li><b>Первые шаги на 7 дней</b><span>польза сразу</span></li><li><b>Запись на диагностику</b><span>следующий шаг</span></li></ol></div>
         <button class="tile__btn" type="button" data-request="ИИ-решения" data-message="Интересен бот-диагност для нашего бизнеса.">Хочу такого бота <span aria-hidden="true">↗</span></button>
       </article>
       <article class="tile tile--wide" data-reveal><span class="bm" aria-hidden="true">Мой рабочий инструмент</span>
@@ -267,7 +278,7 @@
           <p>Похожий конвейер соберу на заказ — под ваши темы, голос и площадки.</p>
           <button class="tile__btn" type="button" data-request="ИИ-решения" data-message="Хочу контент-завод на заказ для нашей компании.">Заказать контент-завод <span aria-hidden="true">↗</span></button>
         </div>
-        <div class="pipe" aria-label="Конвейер контент-завода">
+        <div class="pipe" aria-label="Конвейер контент-завода" data-m-more="Как устроен конвейер">
           <svg class="pipe__lines" viewBox="0 0 700 240" preserveAspectRatio="none" aria-hidden="true">
             <path d="M50 120 H350"/>
             <path d="M260 120 C300 120 300 30 350 30"/><path d="M260 120 C300 120 300 90 350 90"/><path d="M260 120 C300 120 300 150 350 150"/><path d="M260 120 C300 120 300 210 350 210"/>
@@ -290,81 +301,6 @@
   </div>
 </section>
 
-<!-- ============ SERVICES ============ -->
-<section class="section services" id="services" aria-labelledby="srv-title">
-  <div class="decos" aria-hidden="true"><img class="deco deco--srv" src="assets/img/deco-torus.webp" width="1000" height="753" alt="" loading="lazy" decoding="async"></div>
-  <div class="wrap">
-    <div class="head">
-      <p class="eyebrow" data-reveal>Форматы работы</p>
-      <h2 id="srv-title" data-reveal>С чего начнём <em>в вашей ситуации?</em></h2>
-      <p class="head__aside" data-reveal>Иногда достаточно точного разбора. Иногда нужна последовательная пересборка. Цены — ориентир; итог согласуем до начала работы.</p>
-    </div>
-    <div class="cards bento-cards">
-      <article class="card card--feature" data-reveal>
-        <div class="card__top"><span>Первый шаг · онлайн</span><span class="card__n">01</span></div>
-        <h3>Диагностическая сессия</h3>
-        <div class="card__price"><b>15 000 ₽</b><span>90–120 минут онлайн</span></div>
-        <p class="card__for"><b>Кому:</b> когда проблем много и непонятно, за что браться первым.</p>
-        <p>Разбор конкретной ситуации: берём самый нагруженный процесс, раскладываем его по шагам и находим, где на самом деле буксует.</p>
-        <div class="card__out"><span>На выходе</span>Карта узких мест и приоритетов: что чинить в логике работы, что отдать ИИ, а что оставить людям. Не полный аудит компании.</div>
-        <div class="card__foot"><span class="price">Засчитывается в стоимость проекта</span><button class="card__btn" type="button" data-request="Диагностическая сессия">Начать с диагностики <span aria-hidden="true">↗</span></button></div>
-      </article>
-      <article class="card" data-reveal>
-        <div class="card__top"><span>Проектная работа</span><span class="card__n">02</span></div>
-        <h3>Процессы и управление</h3>
-        <div class="card__price"><b><small>от</small> 250 000 ₽</b><span>за проект · обычно 2–3 месяца</span></div>
-        <p class="card__for"><b>Кому:</b> компания выросла, а устройство работы перестало выдерживать нагрузку.</p>
-        <p>Пересобираем выбранный участок: роли и зоны ответственности, процессы «как есть → как должно быть», регулярный менеджмент, ИИ-помощники для команды.</p>
-        <div class="card__out"><span>На выходе</span>Согласованные изменения в выбранном участке и поддержка внедрения.</div>
-        <div class="card__foot"><span class="price">Объём, сроки и состав работ — после диагностики</span><button class="card__btn" type="button" data-request="Процессы и управление">Обсудить проект <span aria-hidden="true">↗</span></button></div>
-      </article>
-      <article class="card" data-reveal>
-        <figure class="ill card__ill" aria-hidden="true"><img src="assets/img/ill/ill-obuchenie-640.webp" srcset="assets/img/ill/ill-obuchenie-640.webp 640w, assets/img/ill/ill-obuchenie-1024.webp 1024w" sizes="(max-width:760px) 100vw, 640px" width="1024" height="576" alt="" loading="lazy" decoding="async"></figure>
-        <div class="card__top"><span>Корпоративная практика</span><span class="card__n">03</span></div>
-        <h3>Обучение команды работе с ИИ</h3>
-        <div class="card__price"><b><small>от</small> 45 000 ₽</b><span>за команду</span></div>
-        <p class="card__for"><b>Кому:</b> хочется перейти от отдельных экспериментов к рабочим сценариям.</p>
-        <p>Базовый практикум для 2–3 сотрудников на задачах компании: отчёты, регламенты, письма, работа с базой знаний.</p>
-        <div class="card__out"><span>На выходе</span>Практика на рабочих задачах, шаблоны и правила проверки качества результата.</div>
-        <div class="card__foot"><span class="price">Интенсив-внедрение для 3–4 человек, 3 недели — 120 000 ₽</span><button class="card__btn" type="button" data-request="Обучение команды работе с ИИ">Обсудить обучение <span aria-hidden="true">↗</span></button></div>
-      </article>
-      <article class="card" data-reveal>
-        <div class="card__top"><span>Индивидуальная работа</span><span class="card__n">04</span></div>
-        <h3>Сопровождение руководителя</h3>
-        <div class="card__price"><b><small>от</small> 50 000 ₽</b><span>в месяц</span></div>
-        <p class="card__for"><b>Кому:</b> нужна внешняя точка опоры, чтобы увидеть ситуацию со стороны.</p>
-        <p>Индивидуальный онлайн-формат: 4 встречи в месяц и поддержка между ними. Разбираем решения, людей, процессы и ход изменений.</p>
-        <div class="card__out"><span>На выходе</span>Регулярный разбор решений, команды, процессов и возможностей ИИ.</div>
-        <div class="card__foot"><span class="price">Формат «Советник собственника» — по запросу</span><button class="card__btn" type="button" data-request="Сопровождение руководителя">Обсудить сопровождение <span aria-hidden="true">↗</span></button></div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============ STEPS ============ -->
-<section class="section steps" id="steps" aria-labelledby="steps-title">
-  <div class="decos" aria-hidden="true"><img class="deco deco--steps" src="assets/img/deco-ribbon.webp" width="1600" height="669" alt="" loading="lazy" decoding="async"></div>
-  <div class="wrap">
-    <div class="head">
-      <p class="eyebrow" data-reveal>Как начинается работа</p>
-      <h2 id="steps-title" data-reveal>От «что-то буксует» — <em>к плану действий</em></h2>
-    </div>
-    <div class="route" id="route">
-      <svg class="route__line" viewBox="0 0 1000 20" preserveAspectRatio="none" aria-hidden="true"><path d="M0 10 H1000" class="route__base"/><path d="M0 10 H1000" class="route__ink" pathLength="1"/></svg>
-      <ol class="route__steps xc" id="xc">
-        <li class="xc__item is-open"><button class="xc__head" type="button" id="xc-b1" aria-expanded="true" aria-controls="xc-p1"><span class="xc__num">01</span><span class="xc__short">Диагностика</span><span class="visually-hidden"> — Разбираем ситуацию</span></button><div class="xc__body" id="xc-p1" role="region" aria-labelledby="xc-b1"><span class="route__dot" aria-hidden="true"></span><span class="route__n">01 — Диагностика</span><h3>Разбираем ситуацию</h3><p>Вы кратко описываете, что происходит. На сессии раскладываем самый нагруженный процесс по шагам.</p></div><img class="xc__deco" src="assets/img/deco-ribbon2.webp" width="1600" height="847" alt="" aria-hidden="true" loading="lazy" decoding="async"></li>
-        <li class="xc__item"><button class="xc__head" type="button" id="xc-b2" aria-expanded="false" aria-controls="xc-p2"><span class="xc__num">02</span><span class="xc__short">Карта проблем</span><span class="visually-hidden"> — Видим причину</span></button><div class="xc__body" id="xc-p2" role="region" aria-labelledby="xc-b2"><span class="route__dot" aria-hidden="true"></span><span class="route__n">02 — Карта проблем</span><h3>Видим причину</h3><p>Где сбой, что его поддерживает и что менять первым.</p></div><img class="xc__deco" src="assets/img/deco-torus.webp" width="1000" height="753" alt="" aria-hidden="true" loading="lazy" decoding="async"></li>
-        <li class="xc__item"><button class="xc__head" type="button" id="xc-b3" aria-expanded="false" aria-controls="xc-p3"><span class="xc__num">03</span><span class="xc__short">Внедрение</span><span class="visually-hidden"> — Меняем по шагам</span></button><div class="xc__body" id="xc-p3" role="region" aria-labelledby="xc-b3"><span class="route__dot" aria-hidden="true"></span><span class="route__n">03 — Внедрение</span><h3>Меняем по шагам</h3><p>Роли, процессы, правила. ИИ — там, где он окупается.</p></div><img class="xc__deco" src="assets/img/deco-blob.webp" width="900" height="863" alt="" aria-hidden="true" loading="lazy" decoding="async"></li>
-        <li class="xc__item"><button class="xc__head" type="button" id="xc-b4" aria-expanded="false" aria-controls="xc-p4"><span class="xc__num">04</span><span class="xc__short">Сопровождение</span><span class="visually-hidden"> — Закрепляем</span></button><div class="xc__body" id="xc-p4" role="region" aria-labelledby="xc-b4"><span class="route__dot" aria-hidden="true"></span><span class="route__n">04 — Сопровождение</span><h3>Закрепляем</h3><p>Изменения приживаются в работе команды, по ходу корректируем.</p></div><img class="xc__deco" src="assets/img/deco-ribbon.webp" width="1600" height="669" alt="" aria-hidden="true" loading="lazy" decoding="async"></li>
-      </ol>
-    </div>
-    <div class="note-split" data-reveal>
-      <div><span>Первичное обращение</span><p>Короткий разговор, чтобы понять задачу и подобрать формат. Ни к чему не обязывает.</p></div>
-      <div><span>Диагностическая сессия</span><p>Отдельная платная работа: глубокий разбор ситуации и карта приоритетов.</p></div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ ABOUT ============ -->
 <section class="section about" id="about" aria-labelledby="about-title">
   <div class="decos" aria-hidden="true"><img class="deco deco--about" src="assets/img/deco-blob.webp" width="900" height="863" alt="" loading="lazy" decoding="async"></div>
@@ -377,6 +313,7 @@
       <p class="eyebrow" data-reveal>Давайте знакомиться</p>
       <h2 id="about-title" data-reveal>Системный взгляд. <em>Человеческий подход.</em></h2>
       <p data-reveal>Мой опыт соединяет HR, корпоративное обучение, бизнес-процессы и организационные изменения. Сегодня к этой базе добавились ИИ-инструменты и цифровые помощники.</p>
+      <div class="about__more" data-m-more="Подробнее обо мне">
       <p data-reveal>Я умею смотреть на компанию сверху — и разбираться, что происходит в ежедневной работе. Где неясна ответственность. Где перегружен руководитель. Где человеку нужен понятный алгоритм, а где задачу уже можно передать технологиям.</p>
       <p data-reveal>Для меня важно, чтобы решения приживались: были понятны команде, учитывали реальную нагрузку и помогали двигаться дальше.</p>
       <ul class="about__facts" data-reveal>
@@ -385,54 +322,89 @@
         <li><b>Психодиагностика команды</b> по методике МГУ «Бизнес-профиль» — люди на своих ролях</li>
         <li><b>Практик внедрения ИИ</b> — собственный контур на n8n, цифровые помощники под задачи команды</li>
       </ul>
+      </div>
       <p class="about__sign" data-reveal>Ваш бизнес-механик на нейронках</p>
     </div>
   </div>
   <div class="wrap experience" id="experience">
     <div class="experience__head" data-reveal><p class="eyebrow">Опыт</p><h3>25+ лет: от тренера учебного центра до собственника и практика ИИ</h3></div>
-    <ol class="timeline" data-reveal><li><span class="tl__y">2000–2002</span><div><b>Владивосток</b><p>Тренер учебных центров: программы по продажам и имиджу.</p></div></li><li><span class="tl__y">2002–2005</span><div><b>Москва, розница</b><p>Учебные центры «Arbor Mundi» и сети «Гастроном-Эконом» (11 регионов). В Arbor Mundi розничные продажи выросли <b class="tl__x">×4</b>.</p></div></li><li><span class="tl__y">2005–2007</span><div><b>Опт и дистрибуция</b><p>ТОПСЕРВИС: обучение и развитие персонала, ROI <b class="tl__x">1850%</b> годовых. Затем антикризисный проект в дистрибуции: чистая прибыль выросла <b class="tl__x">×10</b>.</p></div></li><li><span class="tl__y">2007–2008</span><div><b>Гроссмарт</b><p>Заместитель директора по персоналу: 14 регионов, рост с 6 до 10 тыс. сотрудников.</p></div></li><li><span class="tl__y">2008–2016</span><div><b>Консалтинг</b><p>Оценка руководителей и перестройка процессов в 5 компаниях: инжиниринг, дистрибуция, розница, оптика.</p></div></li><li><span class="tl__y">с 2011</span><div><b>Color Me Beautiful</b><p>Собственник и генеральный директор дистрибьютора.</p></div></li><li><span class="tl__y">с 2025</span><div><b>Внедрение ИИ</b><p>Нейропродавец для ГлавПос, свой контент-завод, автоматизация на n8n.</p></div></li></ol>
+    <ol class="timeline" data-reveal data-m-more="Весь опыт по годам"><li><span class="tl__y">2000–2002</span><div><b>Москва, первые тренинги</b><p>Внешний тренер: Азиатско-Тихоокеанская школа (деловой стиль для студентов и школьников) и учебный центр «ТВ-Арт бизнес» (программы для консультантов по имиджу).</p></div></li><li><span class="tl__y">2002–2005</span><div><b>Москва, розница</b><p>Юнипарфюм, сеть «Arbor Mundi» (2002–2003) — тренинг-менеджер; «Планета Менеджмент», сеть «Гастроном-Эконом» в 11 областных центрах (2003–2005) — руководитель учебного центра. В Arbor Mundi розничные продажи выросли <b class="tl__x">×4</b>.</p></div></li><li><span class="tl__y">2005–2007</span><div><b>Опт и дистрибуция</b><p>ГК «ТОПСЕРВИС», Москва (2005–2006): обучение и развитие персонала, ROI <b class="tl__x">1850%</b> годовых. Затем NISSA, Санкт-Петербург (2006–2007): антикризисный проект, чистая прибыль выросла <b class="tl__x">×10</b>.</p></div></li><li><span class="tl__y">2007–2008</span><div><b>Гроссмарт</b><p>«Элекскор», сеть «Гроссмарт» в Москве и 14 регионах — заместитель директора по персоналу; рост с 6 до 10 тыс. сотрудников.</p></div></li><li><span class="tl__y">2008–2016</span><div><b>Консалтинг</b><p>«Литвинчук маркетинг», Москва: оценка руководителей и перестройка процессов в 5 компаниях: инжиниринг, дистрибуция, розница, оптика.</p></div></li><li><span class="tl__y">с 2011</span><div><b>Color Me Beautiful</b><p>Собственник и генеральный директор официального дистрибьютора CMB (параллельно с консалтингом до 2016).</p></div></li><li><span class="tl__y">с 2025</span><div><b>Внедрение ИИ</b><p>Нейропродавец для ГлавПос, свой контент-завод, автоматизация на n8n.</p></div></li></ol>
     <p class="edu" data-reveal><span>Образование и квалификация</span>Психолог, педагог и тренинг-менеджер: три диплома с отличием, переподготовка ТГУ, с 2025 года — практика внедрения ИИ и n8n.</p>
-  </div>
-  <div class="wrap">
-    <div class="reviews-head" data-reveal><p class="eyebrow">Отзывы участников</p></div>
-    <div class="reviews">
-      <figure class="review" data-reveal><blockquote>«Думаю, что управляющие стали более собранными, выдержанными. Планируют свое рабочее время, ставят приоритеты. Результат виден.»</blockquote><figcaption><b>А. К.</b><span>директор региона «Москва», Гроссмарт · 2007–2008</span></figcaption></figure>
-      <figure class="review" data-reveal><blockquote>«Тренинг, живой, яркий и результативный. …понять, что в мире существуют не только два мнения — Ваше и неправильное.»</blockquote><figcaption><b>Е. К.</b><span>управляющий магазином, Гроссмарт · 2007–2008</span></figcaption></figure>
-      <figure class="review" data-reveal><blockquote>«Я провел переговоры с применением различных техник и методик коммуникативности и делового общения. В результате заново удалось наладить хорошие отношения.»</blockquote><figcaption><b>А. К.</b><span>участник тренинга «Эффективные коммуникации», ТОПСЕРВИС · 2005</span></figcaption></figure>
-      <figure class="review" data-reveal><blockquote>«В работе стала применять методику планирования, легко стало говорить «нет», что главное, обосновано, аргументировано.»</blockquote><figcaption><b>С. М.</b><span>участница тренинга по тайм-менеджменту, ТОПСЕРВИС · 2005</span></figcaption></figure>
-    </div>
   </div>
 </section>
 
-<!-- ============ SPEAKER ============ -->
-<section class="section speaker" id="speaker" aria-labelledby="sp-title">
+<!-- ============ SERVICES ============ -->
+<section class="section services" id="services" aria-labelledby="srv-title">
+  <div class="decos" aria-hidden="true"><img class="deco deco--srv" src="assets/img/deco-torus.webp" width="1000" height="753" alt="" loading="lazy" decoding="async"></div>
   <div class="wrap">
     <div class="head">
-      <p class="eyebrow" data-reveal>Выступления и корпоративные практикумы</p>
-      <h2 id="sp-title" data-reveal>Сложные вещи — <em>понятным языком</em></h2>
-      <p class="head__aside" data-reveal>Доклад · мастер-класс · корпоративный практикум. С примерами, разбором задач и инструментами, которые можно попробовать в работе.</p>
+      <p class="eyebrow" data-reveal>Форматы работы</p>
+      <h2 id="srv-title" data-reveal>С чего начнём <em>в вашей ситуации?</em></h2>
+      <p class="head__aside" data-reveal>Иногда достаточно точного разбора. Иногда нужна последовательная пересборка. Цены — ориентир; итог согласуем до начала работы.</p>
     </div>
-    <div class="speaker__grid">
-      <ul class="hlist hlist--static" data-reveal>
-        <li class="hlist__row"><span class="hlist__n">01</span><div class="hlist__body"><h3>Как собственнику перестать быть главным диспетчером</h3><p>Аудитория уйдёт с пониманием, какие решения можно делегировать и как закрепить это в ролях и правилах.</p></div></li>
-        <li class="hlist__row"><span class="hlist__n">02</span><div class="hlist__body"><h3>ИИ в бизнесе: с какого процесса начать</h3><p>Как выбрать первый сценарий, оценить пользу и не утонуть в сервисах.</p></div></li>
-        <li class="hlist__row"><span class="hlist__n">03</span><div class="hlist__body"><h3>Цифровые помощники для руководителя и команды</h3><p>Живые примеры помощников, которые снимают рутину, и правила проверки их работы.</p></div></li>
-        <li class="hlist__row"><span class="hlist__n">04</span><div class="hlist__body"><h3>HR и ИИ: обучение, адаптация и работа со знаниями</h3><p>Как собрать базу знаний и маршрут адаптации, которые работают без ручного сопровождения.</p></div></li>
-        <li class="hlist__row"><span class="hlist__n">05</span><div class="hlist__body"><h3>Система бьёт класс: почему ставка на «звёздных» сотрудников опасна</h3><p>Как устроить работу так, чтобы обычная команда стабильно давала сильный результат.</p></div></li>
-        <li class="hlist__row"><span class="hlist__n">06</span><div class="hlist__body"><h3>Где ИИ заменит рутину, а где сломает бизнес</h3><p>«Светофор» автоматизации: что отдать нейросетям, где нужен гибрид, а куда ИИ пускать рано.</p></div></li>
-      </ul>
-      <figure class="speaker__photo" data-reveal>
-        <picture><source type="image/avif" srcset="assets/img/speaker-560.avif 560w, assets/img/speaker-800.avif 800w" sizes="(max-width: 900px) 90vw, 30vw"><source type="image/webp" srcset="assets/img/speaker-560.webp 560w, assets/img/speaker-800.webp 800w" sizes="(max-width: 900px) 90vw, 30vw"><img src="assets/img/speaker-800.webp" width="800" height="1000" alt="Валерия Кравченко" loading="lazy" decoding="async"></picture>
-        <figcaption class="glass">Онлайн и очно · для команд и деловых сообществ</figcaption>
-      </figure>
+    <div class="cards bento-cards" data-m-carousel="Форматы работы">
+      <article class="card card--feature" data-reveal>
+        <div class="card__top"><span>Первый шаг · онлайн</span><span class="card__n">01</span></div>
+        <h3>Диагностическая сессия</h3>
+        <div class="card__price"><b>15 000 ₽</b><span>90–120 минут онлайн</span></div>
+        <p class="card__for"><b>Кому:</b> когда проблем много и непонятно, за что браться первым.</p>
+<div class="card__more" data-m-more="Подробнее о формате">        <p>Разбор конкретной ситуации: берём самый нагруженный процесс, раскладываем его по шагам и находим, где на самом деле буксует.</p>
+        <div class="card__out"><span>На выходе</span>Карта узких мест и приоритетов: что чинить в логике работы, что отдать ИИ, а что оставить людям. Не полный аудит компании.</div>
+</div>        <div class="card__foot"><span class="price">Засчитывается в стоимость проекта</span><button class="card__btn" type="button" data-request="Диагностическая сессия">Начать с диагностики <span aria-hidden="true">↗</span></button></div>
+      </article>
+      <article class="card" data-reveal>
+        <div class="card__top"><span>Проектная работа</span><span class="card__n">02</span></div>
+        <h3>Процессы и управление</h3>
+        <div class="card__price"><b><small>от</small> 250 000 ₽</b><span>за проект · обычно 2–3 месяца</span></div>
+        <p class="card__for"><b>Кому:</b> компания выросла, а устройство работы перестало выдерживать нагрузку.</p>
+<div class="card__more" data-m-more="Подробнее о формате">        <p>Пересобираем выбранный участок: роли и зоны ответственности, процессы «как есть → как должно быть», регулярный менеджмент, ИИ-помощники для команды.</p>
+        <div class="card__out"><span>На выходе</span>Согласованные изменения в выбранном участке и поддержка внедрения.</div>
+</div>        <div class="card__foot"><span class="price">Объём, сроки и состав работ — после диагностики</span><button class="card__btn" type="button" data-request="Процессы и управление">Обсудить проект <span aria-hidden="true">↗</span></button></div>
+      </article>
+      <article class="card" data-reveal>
+        <figure class="ill card__ill" aria-hidden="true"><img src="assets/img/ill/ill-obuchenie-640.webp" srcset="assets/img/ill/ill-obuchenie-640.webp 640w, assets/img/ill/ill-obuchenie-1024.webp 1024w" sizes="(max-width:760px) 100vw, 640px" width="1024" height="576" alt="" loading="lazy" decoding="async"></figure>
+        <div class="card__top"><span>Корпоративная практика</span><span class="card__n">03</span></div>
+        <h3>Обучение команды работе с ИИ</h3>
+        <div class="card__price"><b><small>от</small> 45 000 ₽</b><span>за команду</span></div>
+        <p class="card__for"><b>Кому:</b> хочется перейти от отдельных экспериментов к рабочим сценариям.</p>
+<div class="card__more" data-m-more="Подробнее о формате">        <p>Базовый практикум для 2–3 сотрудников на задачах компании: отчёты, регламенты, письма, работа с базой знаний.</p>
+        <div class="card__out"><span>На выходе</span>Практика на рабочих задачах, шаблоны и правила проверки качества результата.</div>
+</div>        <div class="card__foot"><span class="price">Интенсив-внедрение для 3–4 человек, 3 недели — 120 000 ₽</span><button class="card__btn" type="button" data-request="Обучение команды работе с ИИ">Обсудить обучение <span aria-hidden="true">↗</span></button></div>
+      </article>
+      <article class="card" data-reveal>
+        <div class="card__top"><span>Индивидуальная работа</span><span class="card__n">04</span></div>
+        <h3>Сопровождение руководителя</h3>
+        <div class="card__price"><b><small>от</small> 50 000 ₽</b><span>в месяц</span></div>
+        <p class="card__for"><b>Кому:</b> нужна внешняя точка опоры, чтобы увидеть ситуацию со стороны.</p>
+<div class="card__more" data-m-more="Подробнее о формате">        <p>Индивидуальный онлайн-формат: 4 встречи в месяц и поддержка между ними. Разбираем решения, людей, процессы и ход изменений.</p>
+        <div class="card__out"><span>На выходе</span>Регулярный разбор решений, команды, процессов и возможностей ИИ.</div>
+</div>        <div class="card__foot"><span class="price">Формат «Советник собственника» — по запросу</span><button class="card__btn" type="button" data-request="Сопровождение руководителя">Обсудить сопровождение <span aria-hidden="true">↗</span></button></div>
+      </article>
     </div>
-    <div class="speaker__cta" data-reveal><button class="btn btn--ghost" type="button" data-request="Выступление">Пригласить выступить <span class="btn__dot" aria-hidden="true">↗</span></button></div>
-    <!--ARTICLES-->
-    <div class="reads" data-reveal>
-      <div class="reads__head"><h3>Статьи</h3><a class="link-line" href="stati/">Все статьи <span aria-hidden="true">→</span></a></div>
-      <div class="reads__grid"><a class="read" href="stati/sistema-bet-klass/"><span class="read__img read__img--cover"><img src="/assets/img/ill/cover-sistema-bet-klass-640.webp" srcset="/assets/img/ill/cover-sistema-bet-klass-640.webp 640w, /assets/img/ill/cover-sistema-bet-klass-1024.webp 1024w" sizes="(max-width:760px) 100vw, 400px" width="1024" height="576" alt="" loading="lazy" decoding="async"></span><small>28 января 2026 · 5 мин чтения</small><b>Система бьёт класс</b><p>Почему в эпоху ИИ «гении» больше не рулят и выигрывают компании с понятными, повторяемыми процессами и встроенным в них ИИ.</p><span>Читать →</span></a><a class="read" href="stati/direktora-v-lovushke/"><span class="read__img read__img--cover"><img src="/assets/img/ill/cover-direktora-640.webp" srcset="/assets/img/ill/cover-direktora-640.webp 640w, /assets/img/ill/cover-direktora-1024.webp 1024w" sizes="(max-width:760px) 100vw, 400px" width="1024" height="576" alt="" loading="lazy" decoding="async"></span><small>7 мая 2026 · 7 мин чтения</small><b>Директора в ловушке: почему управленцы буксуют на фоне ИИ</b><p>Почему управленцы буксуют на фоне ИИ-проектов и как выйти из ловушки ручного управления и незаменимых людей.</p><span>Читать →</span></a><a class="read" href="stati/otdel-prodazh-v-zavale/"><span class="read__img read__img--cover"><img src="/assets/img/ill/cover-otdel-prodazh-640.webp" srcset="/assets/img/ill/cover-otdel-prodazh-640.webp 640w, /assets/img/ill/cover-otdel-prodazh-1024.webp 1024w" sizes="(max-width:760px) 100vw, 400px" width="1024" height="576" alt="" loading="lazy" decoding="async"></span><small>31 мая 2026 · 7 мин чтения</small><b>Почему ваш отдел продаж живёт в постоянном завале</b><p>Где теряется клиент между заявкой и оплатой и как живая карта пути клиента делает продажи управляемыми.</p><span>Читать →</span></a></div>
+  </div>
+  <div class="wrap mid-cta" data-reveal><a class="btn btn--primary" href="#contact">Обсудить задачу <span class="btn__dot" aria-hidden="true">↗</span></a><p>Не уверены, какой формат подходит? Опишите задачу — предложу.</p></div>
+</section>
+
+<!-- ============ STEPS ============ -->
+<section class="section steps" id="steps" aria-labelledby="steps-title">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow" data-reveal>Как начинается работа</p>
+      <h2 id="steps-title" data-reveal>От «что-то буксует» — <em>к плану действий</em></h2>
     </div>
-    <!--/ARTICLES-->
+    <div class="route" id="route">
+      <svg class="route__line" viewBox="0 0 1000 20" preserveAspectRatio="none" aria-hidden="true"><path d="M0 10 H1000" class="route__base"/><path d="M0 10 H1000" class="route__ink" pathLength="1"/></svg>
+      <ol class="route__steps xc" id="xc" data-m-carousel="Шаги работы">
+        <li class="xc__item is-open"><button class="xc__head" type="button" id="xc-b1" aria-expanded="true" aria-controls="xc-p1"><span class="xc__num">01</span><span class="xc__short">Диагностика</span><span class="visually-hidden"> — Разбираем ситуацию</span></button><div class="xc__body" id="xc-p1" role="region" aria-labelledby="xc-b1"><span class="route__dot" aria-hidden="true"></span><img class="xc__ill" src="assets/img/ill/step-1-diagnostika-640.webp" srcset="assets/img/ill/step-1-diagnostika-640.webp 640w, assets/img/ill/step-1-diagnostika-1024.webp 1024w" sizes="(max-width:768px) 86vw, 620px" width="1024" height="576" alt="" loading="lazy" decoding="async"><span class="xc__lbl">01 · Диагностика</span><h3>Разбираем ситуацию</h3><p>Вы кратко описываете, что происходит. На сессии раскладываем самый нагруженный процесс по шагам.</p></div></li>
+        <li class="xc__item"><button class="xc__head" type="button" id="xc-b2" aria-expanded="false" aria-controls="xc-p2"><span class="xc__num">02</span><span class="xc__short">Карта проблем</span><span class="visually-hidden"> — Видим причину</span></button><div class="xc__body" id="xc-p2" role="region" aria-labelledby="xc-b2"><span class="route__dot" aria-hidden="true"></span><img class="xc__ill" src="assets/img/ill/step-2-karta-640.webp" srcset="assets/img/ill/step-2-karta-640.webp 640w, assets/img/ill/step-2-karta-1024.webp 1024w" sizes="(max-width:768px) 86vw, 620px" width="1024" height="576" alt="" loading="lazy" decoding="async"><span class="xc__lbl">02 · Карта проблем</span><h3>Видим причину</h3><p>Где сбой, что его поддерживает и что менять первым.</p></div></li>
+        <li class="xc__item"><button class="xc__head" type="button" id="xc-b3" aria-expanded="false" aria-controls="xc-p3"><span class="xc__num">03</span><span class="xc__short">Внедрение</span><span class="visually-hidden"> — Меняем по шагам</span></button><div class="xc__body" id="xc-p3" role="region" aria-labelledby="xc-b3"><span class="route__dot" aria-hidden="true"></span><img class="xc__ill" src="assets/img/ill/step-3-vnedrenie-640.webp" srcset="assets/img/ill/step-3-vnedrenie-640.webp 640w, assets/img/ill/step-3-vnedrenie-1024.webp 1024w" sizes="(max-width:768px) 86vw, 620px" width="1024" height="576" alt="" loading="lazy" decoding="async"><span class="xc__lbl">03 · Внедрение</span><h3>Меняем по шагам</h3><p>Роли, процессы, правила. ИИ — там, где он окупается.</p></div></li>
+        <li class="xc__item"><button class="xc__head" type="button" id="xc-b4" aria-expanded="false" aria-controls="xc-p4"><span class="xc__num">04</span><span class="xc__short">Сопровождение</span><span class="visually-hidden"> — Закрепляем</span></button><div class="xc__body" id="xc-p4" role="region" aria-labelledby="xc-b4"><span class="route__dot" aria-hidden="true"></span><img class="xc__ill" src="assets/img/ill/step-4-soprovozhdenie-640.webp" srcset="assets/img/ill/step-4-soprovozhdenie-640.webp 640w, assets/img/ill/step-4-soprovozhdenie-1024.webp 1024w" sizes="(max-width:768px) 86vw, 620px" width="1024" height="576" alt="" loading="lazy" decoding="async"><span class="xc__lbl">04 · Сопровождение</span><h3>Закрепляем</h3><p>Изменения приживаются в работе команды, по ходу корректируем.</p></div></li>
+      </ol>
+    </div>
+    <div class="note-split" data-reveal data-m-more="Чем первичное обращение отличается от диагностики">
+      <div><span>Первичное обращение</span><p>Короткий разговор, чтобы понять задачу и подобрать формат. Ни к чему не обязывает.</p></div>
+      <div><span>Диагностическая сессия</span><p>Отдельная платная работа: глубокий разбор ситуации и карта приоритетов.</p></div>
+    </div>
   </div>
 </section>
 
@@ -462,7 +434,7 @@
       <p class="eyebrow" data-reveal>Начнём с вашей задачи</p>
       <h2 id="ct-title" data-reveal>Где сейчас буксует <em>ваш бизнес?</em></h2>
       <p class="contact__lead" data-reveal>Кратко опишите ситуацию. Я предложу, с какого формата работы имеет смысл начать.</p>
-      <div class="tg-cards" data-reveal>
+      <div class="tg-cards" data-reveal data-m-more="Написать напрямую: Telegram, MAX, почта">
         <a class="tg-card" href="https://t.me/valeryka76" target="_blank" rel="noopener">
           <span class="tg-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-tg"/></svg></span>
           <span><small>Telegram · личные сообщения</small><b>@valeryka76</b></span><span class="tg-card__go" aria-hidden="true">↗</span>
@@ -498,9 +470,9 @@
             <option>Выступление</option>
             <option selected>Помогите выбрать</option>
           </select></div>
-        <div class="field"><label for="f-company">Компания и роль <span class="opt">необязательно</span></label><input id="f-company" name="company" maxlength="150" placeholder="Например: собственник, сеть клиник"></div>
+        <div class="field field--company"><label for="f-company">Компания и роль <span class="opt">необязательно</span></label><input id="f-company" name="company" maxlength="150" placeholder="Например: собственник, сеть клиник"></div>
       </div>
-      <div class="form__row">
+      <div class="form__row form__row--opt" data-m-more="Компания, телефон, удобное время — необязательно">
         <div class="field"><label for="f-phone">Телефон <span class="opt">если удобнее, чтобы перезвонили</span></label><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="24" placeholder="+7 900 000-00-00"><span class="field__err" id="e-phone"></span></div>
         <div class="field field--time"><label for="f-time">Удобное время для связи <span class="opt">необязательно</span></label>
           <div class="time-pick"><input id="f-time" name="time" maxlength="80" placeholder="Например: будни после 18:00"><div class="chips" role="group" aria-label="Быстрый выбор времени"><button type="button" class="chip" data-time="Утро">Утро</button><button type="button" class="chip" data-time="День">День</button><button type="button" class="chip" data-time="Вечер">Вечер</button></div></div></div>
@@ -520,7 +492,41 @@
     </form>
   </div>
 </section>
+
+<!-- ============ SPEAKER ============ -->
+<section class="section speaker" id="speaker" aria-labelledby="sp-title">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow" data-reveal>Выступления и корпоративные практикумы</p>
+      <h2 id="sp-title" data-reveal>Сложные вещи — <em>понятным языком</em></h2>
+      <p class="head__aside" data-reveal>Доклад · мастер-класс · корпоративный практикум. С примерами, разбором задач и инструментами, которые можно попробовать в работе.</p>
+    </div>
+    <div class="speaker__grid">
+      <ul class="hlist hlist--static" data-reveal data-m-more="Темы выступлений">
+        <li class="hlist__row"><span class="hlist__n">01</span><div class="hlist__body"><h3>Как собственнику перестать быть главным диспетчером</h3><p>Аудитория уйдёт с пониманием, какие решения можно делегировать и как закрепить это в ролях и правилах.</p></div></li>
+        <li class="hlist__row"><span class="hlist__n">02</span><div class="hlist__body"><h3>ИИ в бизнесе: с какого процесса начать</h3><p>Как выбрать первый сценарий, оценить пользу и не утонуть в сервисах.</p></div></li>
+        <li class="hlist__row"><span class="hlist__n">03</span><div class="hlist__body"><h3>Цифровые помощники для руководителя и команды</h3><p>Живые примеры помощников, которые снимают рутину, и правила проверки их работы.</p></div></li>
+        <li class="hlist__row"><span class="hlist__n">04</span><div class="hlist__body"><h3>HR и ИИ: обучение, адаптация и работа со знаниями</h3><p>Как собрать базу знаний и маршрут адаптации, которые работают без ручного сопровождения.</p></div></li>
+        <li class="hlist__row"><span class="hlist__n">05</span><div class="hlist__body"><h3>Система бьёт класс: почему ставка на «звёздных» сотрудников опасна</h3><p>Как устроить работу так, чтобы обычная команда стабильно давала сильный результат.</p></div></li>
+        <li class="hlist__row"><span class="hlist__n">06</span><div class="hlist__body"><h3>Где ИИ заменит рутину, а где сломает бизнес</h3><p>«Светофор» автоматизации: что отдать нейросетям, где нужен гибрид, а куда ИИ пускать рано.</p></div></li>
+      </ul>
+      <figure class="speaker__photo" data-reveal>
+        <picture><source type="image/avif" srcset="assets/img/speaker-560.avif 560w, assets/img/speaker-800.avif 800w" sizes="(max-width: 900px) 90vw, 30vw"><source type="image/webp" srcset="assets/img/speaker-560.webp 560w, assets/img/speaker-800.webp 800w" sizes="(max-width: 900px) 90vw, 30vw"><img src="assets/img/speaker-800.webp" width="800" height="1000" alt="Валерия Кравченко" loading="lazy" decoding="async"></picture>
+        <figcaption class="glass">Онлайн и очно · для команд и деловых сообществ</figcaption>
+      </figure>
+    </div>
+    <div class="speaker__cta" data-reveal><button class="btn btn--ghost" type="button" data-request="Выступление">Пригласить выступить <span class="btn__dot" aria-hidden="true">↗</span></button></div>
+    <!--ARTICLES-->
+    <div class="reads" data-reveal>
+      <div class="reads__head"><h3>Статьи</h3><a class="link-line" href="stati/">Все статьи <span aria-hidden="true">→</span></a></div>
+      <div class="reads__grid"><a class="read" href="stati/sistema-bet-klass/"><span class="read__img read__img--cover"><img src="/assets/img/ill/cover-sistema-bet-klass-640.webp" srcset="/assets/img/ill/cover-sistema-bet-klass-640.webp 640w, /assets/img/ill/cover-sistema-bet-klass-1024.webp 1024w" sizes="(max-width:760px) 100vw, 400px" width="1024" height="576" alt="" loading="lazy" decoding="async"></span><small>28 января 2026 · 5 мин чтения</small><b>Система бьёт класс</b><p>Почему в эпоху ИИ «гении» больше не рулят и выигрывают компании с понятными, повторяемыми процессами и встроенным в них ИИ.</p><span>Читать →</span></a><a class="read" href="stati/direktora-v-lovushke/"><span class="read__img read__img--cover"><img src="/assets/img/ill/cover-direktora-640.webp" srcset="/assets/img/ill/cover-direktora-640.webp 640w, /assets/img/ill/cover-direktora-1024.webp 1024w" sizes="(max-width:760px) 100vw, 400px" width="1024" height="576" alt="" loading="lazy" decoding="async"></span><small>7 мая 2026 · 7 мин чтения</small><b>Директора в ловушке: почему управленцы буксуют на фоне ИИ</b><p>Почему управленцы буксуют на фоне ИИ-проектов и как выйти из ловушки ручного управления и незаменимых людей.</p><span>Читать →</span></a><a class="read" href="stati/otdel-prodazh-v-zavale/"><span class="read__img read__img--cover"><img src="/assets/img/ill/cover-otdel-prodazh-640.webp" srcset="/assets/img/ill/cover-otdel-prodazh-640.webp 640w, /assets/img/ill/cover-otdel-prodazh-1024.webp 1024w" sizes="(max-width:760px) 100vw, 400px" width="1024" height="576" alt="" loading="lazy" decoding="async"></span><small>31 мая 2026 · 7 мин чтения</small><b>Почему ваш отдел продаж живёт в постоянном завале</b><p>Где теряется клиент между заявкой и оплатой и как живая карта пути клиента делает продажи управляемыми.</p><span>Читать →</span></a></div>
+    </div>
+    <!--/ARTICLES-->
+  </div>
+</section>
+
 </main>
+<a class="m-cta" href="#contact" aria-label="Оставить заявку — перейти к форме">Оставить заявку <span aria-hidden="true">↗</span></a>
 
 <footer class="footer">
   <div class="wrap footer__grid">
@@ -531,7 +537,7 @@
       <a href="https://dzen.ru/neuro_progressor" target="_blank" rel="noopener" aria-label="Канал в Дзене" title="Дзен"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2c.2 5.6 4.4 9.8 10 10-5.6.2-9.8 4.4-10 10-.2-5.6-4.4-9.8-10-10 5.6-.2 9.8-4.4 10-10Z"/></svg></a>
       <a href="https://tenchat.ru/4873677" target="_blank" rel="noopener" aria-label="Профиль в TenChat" title="TenChat"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="6" fill="none" stroke="currentColor" stroke-width="1.7"/><path fill="currentColor" d="M7.5 8h9v2h-3.5v7h-2v-7H7.5z"/></svg></a>
     </div>
-    <nav class="footer__nav" aria-label="Навигация в подвале"><a href="#approach">Подход</a><a href="#cases">Проекты</a><a href="#ai">ИИ-решения</a><a href="#services">Форматы</a><a href="#speaker">Выступления</a><a href="#faq">Вопросы</a></nav>
+    <nav class="footer__nav" aria-label="Навигация в подвале"><a href="#approach">Подход</a><a href="#cases">Проекты</a><a href="#ai">ИИ-решения</a><a href="#about">Обо мне</a><a href="#services">Форматы</a><a href="#faq">Вопросы</a><a href="#speaker">Выступления</a><a href="stati/">Статьи</a></nav>
     <div class="footer__tg">
       <a href="https://t.me/neuro_progressor" target="_blank" rel="noopener" aria-label="Telegram-канал @neuro_progressor"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tg"/></svg>@neuro_progressor</a>
       <a href="https://t.me/valeryka76" target="_blank" rel="noopener" aria-label="Написать в Telegram @valeryka76"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tg"/></svg>@valeryka76</a>
@@ -553,8 +559,9 @@
 </svg>
 
 <script src="assets/js/lenis.min.js" defer></script>
-<script src="assets/js/mesh.js" defer></script>
-<script src="assets/js/main.js" defer></script>
-<script src="assets/js/effects.js" defer></script>
+<script src="assets/js/mesh.js?v=20261019b" defer></script>
+<script src="assets/js/main.js?v=20261019b" defer></script>
+<script src="assets/js/effects.js?v=20261019b" defer></script>
+<script src="assets/js/mobile.js?v=20261019b" defer></script>
 </body>
 </html>
