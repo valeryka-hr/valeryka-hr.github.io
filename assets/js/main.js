@@ -93,6 +93,10 @@
   const sizeRails = () => $$('.rail').forEach((r) => r.style.setProperty('--rail-h', Math.max(0, r.offsetHeight - 22) + 'px'));
   sizeRails();
 
+  // never show the floating CTA while the contact form itself is on screen
+  let formInView = false;
+  const formEl = $('#leadForm');
+  if (formEl && 'IntersectionObserver' in window) new IntersectionObserver((es) => es.forEach((en) => { formInView = en.isIntersecting; if (formInView) floatCta.classList.remove('show'); else lastY = -1; }), { threshold: 0 }).observe(formEl);
   let lastY = -1;
   function frameTick() {
     const y = window.scrollY;
@@ -101,7 +105,7 @@
       header.classList.toggle('is-scrolled', y > 24);
       const heroH = hero.offsetHeight;
       const cr = contact.getBoundingClientRect();
-      floatCta.classList.toggle('show', y > heroH * 0.7 && cr.top > innerHeight * 0.6);
+      floatCta.classList.toggle('show', y > heroH * 0.7 && cr.top > innerHeight * 0.6 && !formInView);
     }
   }
   function loop(time) { if (lenis) lenis.raf(time); frameTick(); requestAnimationFrame(loop); }
@@ -170,6 +174,7 @@
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     status.className = 'form__status'; status.textContent = '';
+    const thx = $('#formThanks'); if (thx) thx.hidden = true;
     const bad = validate();
     if (bad) { bad.focus(); show('err', 'Проверьте, пожалуйста, отмеченные поля.'); return; }
     const d = Object.fromEntries(new FormData(form).entries());
@@ -188,7 +193,9 @@
       const json = await res.json().catch(() => ({}));
       if (!res.ok || !json.ok) throw new Error(json.error || 'HTTP ' + res.status);
       form.reset();
-      show('ok', '<b>Спасибо, запрос у меня.</b> Отвечу в течение рабочего дня по указанному контакту.');
+      const th = $('#formThanks');
+      if (th) { th.hidden = false; th.focus({ preventScroll: true }); th.scrollIntoView({ block: 'nearest', behavior: reduce ? 'auto' : 'smooth' }); }
+      else show('ok', '<b>Спасибо, заявка у меня.</b> Отвечу в течение рабочего дня.');
     } catch (err) {
       const esc = (x) => String(x).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
       show('err', `Не получилось отправить форму — так бывает. Ваш текст не потерян, отправьте его удобным способом: <span class="fallback"><a href="${tgLink(payload)}" target="_blank" rel="noopener">Telegram</a><a href="${MAX_DM}" target="_blank" rel="noopener" data-copy="${esc(leadText(payload))}">MAX</a><a href="${mailLink(payload)}">Почта</a></span><small id="copyHint"></small>`);
