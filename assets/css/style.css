@@ -1256,8 +1256,7 @@ body{background:radial-gradient(60% 45% at 0% 18%,rgba(17,26,70,.75),transparent
   .tile--lead .stats dd{margin:0}
 }
 @media (max-width:768px){
-  .experience:has(.timeline.m-collapsed) .edu{display:none}
-  .experience__head{margin-bottom:0}
+    .experience__head{margin-bottom:0}
   .hero__facts{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
   .hero__facts .fact{display:block!important;padding:0}
   .hero__facts .fact__big{display:block;font-size:30px}
@@ -1313,3 +1312,22 @@ body{background:radial-gradient(60% 45% at 0% 18%,rgba(17,26,70,.75),transparent
 video::cue{font-size:1.05em;background:rgba(8,10,30,.72);color:#fff}
 @media (max-width:768px){.about__video{margin:18px 0 4px}.vplayer__play{width:64px;height:64px;margin:-32px 0 0 -32px}.about__video figcaption{font-size:14px}}
 @media (prefers-reduced-motion:reduce){.vplayer__play{transition:none}}
+
+/* образование: краткий текст + «Подробнее» (свёрнуто на всех ширинах) */
+.edu{align-items:flex-start}
+.edu__body{flex:1 1 280px;min-width:0}
+.edu__body>p{margin:0;line-height:1.55}
+.edu__more{margin-top:12px}
+.edu__more>summary{display:inline-flex;align-items:center;gap:10px;list-style:none;cursor:pointer;font:inherit;font-size:16px;font-weight:600;color:var(--ink);padding:10px 16px;border-radius:999px;
+  background:var(--gl-band),rgba(26,28,70,.42);border:0;box-shadow:var(--gl-rim),var(--gl-under)}
+.edu__more>summary::-webkit-details-marker{display:none}
+.edu__more>summary::after{content:'';width:8px;height:8px;border-right:2px solid var(--lilac);border-bottom:2px solid var(--lilac);transform:rotate(45deg) translateY(-2px);transition:transform .25s}
+.edu__more[open]>summary::after{transform:rotate(-135deg) translateY(-1px)}
+.edu__more>summary:focus-visible{outline:2px solid var(--lilac);outline-offset:3px}
+.edu__more .edu__h{margin:18px 0 8px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--lilac)}
+.edu__more .edu__h:first-child{margin-top:14px}
+.edu__more ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.edu__more li{font-size:15.5px;line-height:1.45;color:var(--ink-soft);padding:10px 14px;border-radius:14px;border:1px solid var(--hair);background:rgba(22,26,64,.4)}
+.edu__more li b{color:var(--ink);font-weight:600}
+.edu__more li em{font-style:normal;color:var(--lilac)}
+@media (max-width:768px){.edu__more>summary{font-size:15px;width:100%;justify-content:space-between}.edu__more li{font-size:15px}}
