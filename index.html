@@ -50,6 +50,7 @@
 <section class="hero" aria-labelledby="hero-title">
   <div class="hero__bg" aria-hidden="true">
     <canvas class="mesh" id="mesh"></canvas>
+    <canvas class="grid" id="grid" aria-hidden="true"></canvas>
     <div class="hero__grain"></div>
     <div class="hero__rules"><span></span><span></span><span></span></div>
     <div class="decos" aria-hidden="true"><img class="deco deco--hero" src="assets/img/deco-ribbon2.webp" width="1600" height="847" alt="" loading="lazy" decoding="async"></div>
@@ -112,25 +113,9 @@
     <div class="principle__copy">
       <p class="eyebrow" data-reveal>Принцип</p>
       <h2 id="pr-title" data-reveal>Сначала — система.<br><em>Потом — автоматизация.</em></h2>
-      <p data-reveal>ИИ усиливает то, что уже устроено. Если процесс хаотичен, нейросеть просто ускорит хаос.</p>
+      <p data-reveal>ИИ усиливает то, что уже устроено. Если в процессе бардак, нейросеть просто ускорит бардак.</p>
     </div>
-    <figure class="chaos" data-reveal aria-label="Схема: спутанные связи слева превращаются в выстроенную цепочку справа">
-      <svg viewBox="0 0 640 300" aria-hidden="true">
-        <g class="chaos__mess">
-          <path d="M40 70 C150 20 60 200 170 150 S90 40 210 90 S60 260 150 240 S230 170 240 230"/>
-          <path d="M70 230 C20 140 200 200 120 110 S230 40 190 180"/>
-          <path d="M30 150 C120 120 90 30 230 140"/>
-        </g>
-        <g class="chaos__dots"><circle cx="40" cy="70" r="5"/><circle cx="210" cy="90" r="5"/><circle cx="150" cy="240" r="5"/><circle cx="120" cy="110" r="5"/><circle cx="30" cy="150" r="5"/><circle cx="240" cy="230" r="5"/></g>
-        <path class="chaos__arrow" d="M282 150 H352 M340 138 L354 150 L340 162"/>
-        <g class="chaos__order">
-          <path d="M400 70 H600 M400 150 H600 M400 230 H600 M400 70 V230 M500 70 V230 M600 70 V230"/>
-        </g>
-        <g class="chaos__nodes"><circle cx="400" cy="70" r="6"/><circle cx="500" cy="70" r="6"/><circle cx="600" cy="70" r="6"/><circle cx="400" cy="150" r="6"/><circle cx="500" cy="150" r="6"/><circle cx="600" cy="150" r="6"/><circle cx="400" cy="230" r="6"/><circle cx="500" cy="230" r="6"/><circle cx="600" cy="230" r="6"/></g>
-        <circle class="chaos__spark" r="4.5"><animateMotion dur="7s" repeatCount="indefinite" path="M400 70 H600 V150 H400 V230 H600"/></circle>
-      </svg>
-      <figcaption><span>Хаос</span><span>Система</span></figcaption>
-    </figure>
+    <figure class="chaos chaos--ill" data-reveal><div class="ill"><img src="assets/img/ill/ill-bardak-sistema-640.webp" srcset="assets/img/ill/ill-bardak-sistema-640.webp 640w, assets/img/ill/ill-bardak-sistema-1024.webp 1024w" sizes="(max-width:900px) 100vw, 640px" width="1024" height="576" alt="Иллюстрация: спутанный клубок слева превращается в ровную цепочку блоков справа" loading="lazy" decoding="async"></div><figcaption><span>Бардак</span><i aria-hidden="true">→</i><span>Система</span></figcaption></figure>
   </div>
 </section>
 
@@ -163,6 +148,7 @@
   </div>
   <div class="wrap">
     <div class="causes" data-reveal>
+      <figure class="ill causes__ill"><img src="assets/img/ill/ill-poteri-640.webp" srcset="assets/img/ill/ill-poteri-640.webp 640w, assets/img/ill/ill-poteri-1024.webp 1024w" sizes="(max-width:1200px) 100vw, 1140px" width="1024" height="576" alt="Иллюстрация: прохудившиеся трубы и лупа — где утекают деньги" loading="lazy" decoding="async"><figcaption>Где теряются деньги</figcaption></figure>
       <p class="causes__label">Как ищу причину — на примере жалобы «люди не справляются»</p>
       <div class="causes__map">
         <svg class="causes__lines" viewBox="0 0 1000 300" preserveAspectRatio="none" aria-hidden="true">
@@ -197,16 +183,16 @@
       </div>
     </div>
     <div class="cases__list">
-      <article class="case case--lead" data-reveal>
-        <div class="case__meta"><span class="case__no">Большой проект</span><span class="case__logo case__logo--word">ТОПСЕРВИС</span><span class="case__type">B2B-дистрибуция фото- и электротоваров · в роли менеджера по развитию персонала · 2005–2006</span></div>
+      <article class="case case--lead" data-reveal><span class="bm" aria-hidden="true">Большой проект · 2005–2006</span>
+        <div class="case__meta"><span class="case__no">Большой проект</span><span class="case__logo case__logo--word">ТОПСЕРВИС</span><span class="case__type">Оптовая торговля фото- и электротоварами · в роли менеджера по развитию персонала · 2005–2006</span></div>
         <h3 class="case__title">Обучение и развитие персонала, которые окупились <em>1850% годовых</em></h3>
         <dl class="case__flow case__flow--3">
-          <div><dt>Ситуация</dt><dd>Московская b2b-компания: за время проекта — со 100 до 250 сотрудников, дилерская сеть — 540 компаний в 76 городах. Между отделами — склоки: бухгалтерия предъявляет претензии продажам за документы, менеджеры плохо знают продукт, аттестация — формальность для повышения зарплаты.</dd></div>
+          <div><dt>Ситуация</dt><dd>Московская оптовая компания: за время проекта — со 100 до 250 сотрудников, дилерская сеть — 540 компаний в 76 городах. Между отделами — склоки: бухгалтерия предъявляет претензии продажам за документы, менеджеры плохо знают продукт, аттестация — формальность для повышения зарплаты.</dd></div>
           <div><dt>Что сделано</dt><dd>Цели компании разложены до планов работ сотрудников. Аттестация с оценкой 360° и мотивационным интервью, внутреннее и внешнее обучение, тренинги и семинары, кадровый резерв, подготовка внутренних преподавателей, оценка эффективности обучения.</dd></div>
           <div><dt>Результат</dt><dd><b class="case__big">ROI 1850<i>%</i></b> годовых — соотношение вложений в проект за 8 месяцев и полученной выгоды, по отчёту по проекту. На совещаниях топ-менеджмента перестала подниматься постоянная проблема претензий одних отделов к другим, выросла управляемость.</dd></div>
         </dl>
       </article>
-      <article class="case" data-reveal>
+      <article class="case" data-reveal><span class="bm" aria-hidden="true">2024–2025</span>
         <div class="case__meta"><span class="case__no">Проект 01</span><span class="case__logo"><img src="assets/img/logo-vhm.png" width="143" height="22" alt="ВНИИХОЛОДМАШ" loading="lazy"></span><span class="case__type">Консалтинговый проект · 11.2024–03.2025</span></div>
         <h3 class="case__title">Команда изменений для научно-производственного предприятия</h3>
         <dl class="case__flow case__flow--3">
@@ -215,7 +201,7 @@
           <div><dt>Результат</dt><dd>Одна из групп сложилась в рабочую команду. Выяснилось, что за «конфликтами» стоят неудобные процессы. Разработаны механизм загрузки механического цеха и испытательных стендов и система «Предложи и реализуй» для инициатив сотрудников.</dd></div>
         </dl>
       </article>
-      <article class="case" data-reveal>
+      <article class="case" data-reveal><span class="bm" aria-hidden="true">2007–2008</span>
         <div class="case__meta"><span class="case__no">Проект 02</span><span class="case__logo"><img src="assets/img/logo-grossmart.png" width="128" height="14" alt="Гроссмарт" loading="lazy"><small>Элекскор</small></span><span class="case__type">В роли зам. директора по персоналу · 2007–2008</span></div>
         <h3 class="case__title">Обучение и подбор для сети, которая росла быстрее, чем готовились люди</h3>
         <dl class="case__flow case__flow--3">
@@ -224,7 +210,7 @@
           <div><dt>Результат</dt><dd>Текучесть значительно снизилась, в учебный центр выстраивались очереди на аттестацию. Рост эффективности подбора и обучения подтвердили оценка и торговый блок — основной заказчик обучения.</dd></div>
         </dl>
       </article>
-      <article class="case" data-reveal>
+      <article class="case" data-reveal><span class="bm" aria-hidden="true">2003–2005</span>
         <div class="case__meta"><span class="case__no">Проект 03</span><span class="case__logo case__logo--word">Планета Менеджмент</span><span class="case__type">«Гастроном-Эконом», «Компас» · в роли руководителя учебного центра · 2003–2005</span></div>
         <h3 class="case__title">Учебный центр с нуля для сети из 14 магазинов</h3>
         <dl class="case__flow case__flow--3">
@@ -247,7 +233,8 @@
       <p class="head__aside" data-reveal>Ставлю ИИ туда, где он действительно экономит время и деньги. Одно решение работает у клиента, одно — мой рабочий инструмент, одно в обкатке. Похожее соберу под ваш бизнес на заказ.</p>
     </div>
     <div class="bento">
-      <article class="tile tile--lead glass" data-reveal>
+      <article class="tile tile--lead glass" data-reveal><span class="bm" aria-hidden="true">Работает у клиента</span>
+        <figure class="ill tile__ill" aria-hidden="true"><img src="assets/img/ill/ill-lidorub-640.webp" srcset="assets/img/ill/ill-lidorub-640.webp 640w, assets/img/ill/ill-lidorub-1024.webp 1024w" sizes="(max-width:760px) 100vw, 640px" width="1024" height="576" alt="" loading="lazy" decoding="async"></figure>
         <div class="tile__body">
           <span class="tile__tag tile__tag--live">Работает у клиента</span>
           <h3>Нейропродавец «Лидоруб»</h3>
@@ -262,7 +249,8 @@
         </div>
         <div class="tile__flow" aria-label="Как работает нейропродавец"><ol class="rail"><li><b>Клиент пишет</b><span>в чат сайта или Telegram — даже ночью</span></li><li><b>Ответ за секунды</b><span>клиент не уходит к конкуренту</span></li><li><b>Уточняющие вопросы</b><span>зачем, тираж, бюджет, сроки</span></li><li><b>Подбор по каталогу</b><span>и по базе частых вопросов</span></li><li><b>Допродажа</b><span>упаковка, макет, срочная доставка</span></li><li><b>Контакты для CRM</b><span>вся история на виду</span></li><li><b>Передача менеджеру</b><span>горячий клиент с понятной задачей</span></li></ol></div>
       </article>
-      <article class="tile tile--diag" data-reveal>
+      <article class="tile tile--diag" data-reveal><span class="bm" aria-hidden="true">В обкатке</span>
+        <figure class="ill tile__ill" aria-hidden="true"><img src="assets/img/ill/ill-diagnost-640.webp" srcset="assets/img/ill/ill-diagnost-640.webp 640w, assets/img/ill/ill-diagnost-1024.webp 1024w" sizes="(max-width:760px) 100vw, 640px" width="1024" height="576" alt="" loading="lazy" decoding="async"></figure>
         <span class="tile__tag tile__tag--test">В обкатке</span>
         <h3>Бот-диагност</h3>
         <p>Сейчас тестирую. За несколько минут переписки бот расспрашивает о ситуации, находит, где в бизнесе теряются деньги — привлечение заявок, процессы, управление людьми или готовность к ИИ, — и предлагает первые шаги.</p>
@@ -270,7 +258,8 @@
         <div class="tile__flow" aria-label="Как проходит экспресс-диагностика"><ol class="rail"><li><b>Знакомство</b><span>как обращаться, в каком тоне</span></li><li><b>Рассказ о ситуации</b><span>своими словами, без терминов</span></li><li><b>Корень проблемы</b><span>видно, что лечить первым</span></li><li><b>Где теряются деньги</b><span>и что будет, если не менять</span></li><li><b>Первые шаги на 7 дней</b><span>польза сразу</span></li><li><b>Запись на диагностику</b><span>следующий шаг</span></li></ol></div>
         <button class="tile__btn" type="button" data-request="ИИ-решения" data-message="Интересен бот-диагност для нашего бизнеса.">Хочу такого бота <span aria-hidden="true">↗</span></button>
       </article>
-      <article class="tile tile--wide" data-reveal>
+      <article class="tile tile--wide" data-reveal><span class="bm" aria-hidden="true">Мой рабочий инструмент</span>
+        <figure class="ill tile__ill" aria-hidden="true"><img src="assets/img/ill/ill-pisaka-640.webp" srcset="assets/img/ill/ill-pisaka-640.webp 640w, assets/img/ill/ill-pisaka-1024.webp 1024w" sizes="(max-width:760px) 100vw, 640px" width="1024" height="576" alt="" loading="lazy" decoding="async"></figure>
         <div class="tile__body">
           <span class="tile__tag">Мой рабочий инструмент</span>
           <h3>Контент-завод «ПИСАКА»</h3>
@@ -330,6 +319,7 @@
         <div class="card__foot"><span class="price">Объём, сроки и состав работ — после диагностики</span><button class="card__btn" type="button" data-request="Процессы и управление">Обсудить проект <span aria-hidden="true">↗</span></button></div>
       </article>
       <article class="card" data-reveal>
+        <figure class="ill card__ill" aria-hidden="true"><img src="assets/img/ill/ill-obuchenie-640.webp" srcset="assets/img/ill/ill-obuchenie-640.webp 640w, assets/img/ill/ill-obuchenie-1024.webp 1024w" sizes="(max-width:760px) 100vw, 640px" width="1024" height="576" alt="" loading="lazy" decoding="async"></figure>
         <div class="card__top"><span>Корпоративная практика</span><span class="card__n">03</span></div>
         <h3>Обучение команды работе с ИИ</h3>
         <div class="card__price"><b><small>от</small> 45 000 ₽</b><span>за команду</span></div>
@@ -361,11 +351,11 @@
     </div>
     <div class="route" id="route">
       <svg class="route__line" viewBox="0 0 1000 20" preserveAspectRatio="none" aria-hidden="true"><path d="M0 10 H1000" class="route__base"/><path d="M0 10 H1000" class="route__ink" pathLength="1"/></svg>
-      <ol class="route__steps">
-        <li><span class="route__dot" aria-hidden="true"></span><span class="route__n">01 — Диагностика</span><h3>Разбираем ситуацию</h3><p>Вы кратко описываете, что происходит. На сессии раскладываем самый нагруженный процесс по шагам.</p></li>
-        <li><span class="route__dot" aria-hidden="true"></span><span class="route__n">02 — Карта проблем</span><h3>Видим причину</h3><p>Где сбой, что его поддерживает и что менять первым.</p></li>
-        <li><span class="route__dot" aria-hidden="true"></span><span class="route__n">03 — Внедрение</span><h3>Меняем по шагам</h3><p>Роли, процессы, правила. ИИ — там, где он окупается.</p></li>
-        <li><span class="route__dot" aria-hidden="true"></span><span class="route__n">04 — Сопровождение</span><h3>Закрепляем</h3><p>Изменения приживаются в работе команды, по ходу корректируем.</p></li>
+      <ol class="route__steps xc" id="xc">
+        <li class="xc__item is-open"><button class="xc__head" type="button" id="xc-b1" aria-expanded="true" aria-controls="xc-p1"><span class="xc__num">01</span><span class="xc__short">Диагностика</span><span class="visually-hidden"> — Разбираем ситуацию</span></button><div class="xc__body" id="xc-p1" role="region" aria-labelledby="xc-b1"><span class="route__dot" aria-hidden="true"></span><span class="route__n">01 — Диагностика</span><h3>Разбираем ситуацию</h3><p>Вы кратко описываете, что происходит. На сессии раскладываем самый нагруженный процесс по шагам.</p></div><img class="xc__deco" src="assets/img/deco-ribbon2.webp" width="1600" height="847" alt="" aria-hidden="true" loading="lazy" decoding="async"></li>
+        <li class="xc__item"><button class="xc__head" type="button" id="xc-b2" aria-expanded="false" aria-controls="xc-p2"><span class="xc__num">02</span><span class="xc__short">Карта проблем</span><span class="visually-hidden"> — Видим причину</span></button><div class="xc__body" id="xc-p2" role="region" aria-labelledby="xc-b2"><span class="route__dot" aria-hidden="true"></span><span class="route__n">02 — Карта проблем</span><h3>Видим причину</h3><p>Где сбой, что его поддерживает и что менять первым.</p></div><img class="xc__deco" src="assets/img/deco-torus.webp" width="1000" height="753" alt="" aria-hidden="true" loading="lazy" decoding="async"></li>
+        <li class="xc__item"><button class="xc__head" type="button" id="xc-b3" aria-expanded="false" aria-controls="xc-p3"><span class="xc__num">03</span><span class="xc__short">Внедрение</span><span class="visually-hidden"> — Меняем по шагам</span></button><div class="xc__body" id="xc-p3" role="region" aria-labelledby="xc-b3"><span class="route__dot" aria-hidden="true"></span><span class="route__n">03 — Внедрение</span><h3>Меняем по шагам</h3><p>Роли, процессы, правила. ИИ — там, где он окупается.</p></div><img class="xc__deco" src="assets/img/deco-blob.webp" width="900" height="863" alt="" aria-hidden="true" loading="lazy" decoding="async"></li>
+        <li class="xc__item"><button class="xc__head" type="button" id="xc-b4" aria-expanded="false" aria-controls="xc-p4"><span class="xc__num">04</span><span class="xc__short">Сопровождение</span><span class="visually-hidden"> — Закрепляем</span></button><div class="xc__body" id="xc-p4" role="region" aria-labelledby="xc-b4"><span class="route__dot" aria-hidden="true"></span><span class="route__n">04 — Сопровождение</span><h3>Закрепляем</h3><p>Изменения приживаются в работе команды, по ходу корректируем.</p></div><img class="xc__deco" src="assets/img/deco-ribbon.webp" width="1600" height="669" alt="" aria-hidden="true" loading="lazy" decoding="async"></li>
       </ol>
     </div>
     <div class="note-split" data-reveal>
@@ -440,7 +430,7 @@
     <!--ARTICLES-->
     <div class="reads" data-reveal>
       <div class="reads__head"><h3>Статьи</h3><a class="link-line" href="stati/">Все статьи <span aria-hidden="true">→</span></a></div>
-      <div class="reads__grid"><a class="read" href="stati/sistema-bet-klass/"><span class="read__img"><img src="/assets/img/stati/sistema-bet-klass-1-720.webp" alt="" loading="lazy" decoding="async"></span><small>28 января 2026 · 5 мин чтения</small><b>Система бьёт класс</b><p>Почему в эпоху ИИ «гении» больше не рулят и выигрывают компании с понятными, повторяемыми процессами и встроенным в них ИИ.</p><span>Читать →</span></a><a class="read" href="stati/direktora-v-lovushke/"><span class="read__img"><img src="/assets/img/stati/direktora-v-lovushke-1-1200.webp" alt="" loading="lazy" decoding="async"></span><small>7 мая 2026 · 7 мин чтения</small><b>Директора в ловушке: почему управленцы буксуют на фоне ИИ</b><p>Почему управленцы буксуют на фоне ИИ-проектов и как выйти из ловушки ручного управления и незаменимых людей.</p><span>Читать →</span></a><a class="read" href="stati/otdel-prodazh-v-zavale/"><span class="read__img"><img src="/assets/img/stati/otdel-prodazh-v-zavale-1-720.webp" alt="" loading="lazy" decoding="async"></span><small>31 мая 2026 · 7 мин чтения</small><b>Почему ваш отдел продаж живёт в постоянном завале</b><p>Где теряется клиент между заявкой и оплатой и как живая карта пути клиента делает продажи управляемыми.</p><span>Читать →</span></a></div>
+      <div class="reads__grid"><a class="read" href="stati/sistema-bet-klass/"><span class="read__img read__img--cover"><img src="/assets/img/ill/cover-sistema-bet-klass-640.webp" srcset="/assets/img/ill/cover-sistema-bet-klass-640.webp 640w, /assets/img/ill/cover-sistema-bet-klass-1024.webp 1024w" sizes="(max-width:760px) 100vw, 400px" width="1024" height="576" alt="" loading="lazy" decoding="async"></span><small>28 января 2026 · 5 мин чтения</small><b>Система бьёт класс</b><p>Почему в эпоху ИИ «гении» больше не рулят и выигрывают компании с понятными, повторяемыми процессами и встроенным в них ИИ.</p><span>Читать →</span></a><a class="read" href="stati/direktora-v-lovushke/"><span class="read__img read__img--cover"><img src="/assets/img/ill/cover-direktora-640.webp" srcset="/assets/img/ill/cover-direktora-640.webp 640w, /assets/img/ill/cover-direktora-1024.webp 1024w" sizes="(max-width:760px) 100vw, 400px" width="1024" height="576" alt="" loading="lazy" decoding="async"></span><small>7 мая 2026 · 7 мин чтения</small><b>Директора в ловушке: почему управленцы буксуют на фоне ИИ</b><p>Почему управленцы буксуют на фоне ИИ-проектов и как выйти из ловушки ручного управления и незаменимых людей.</p><span>Читать →</span></a><a class="read" href="stati/otdel-prodazh-v-zavale/"><span class="read__img read__img--cover"><img src="/assets/img/ill/cover-otdel-prodazh-640.webp" srcset="/assets/img/ill/cover-otdel-prodazh-640.webp 640w, /assets/img/ill/cover-otdel-prodazh-1024.webp 1024w" sizes="(max-width:760px) 100vw, 400px" width="1024" height="576" alt="" loading="lazy" decoding="async"></span><small>31 мая 2026 · 7 мин чтения</small><b>Почему ваш отдел продаж живёт в постоянном завале</b><p>Где теряется клиент между заявкой и оплатой и как живая карта пути клиента делает продажи управляемыми.</p><span>Читать →</span></a></div>
     </div>
     <!--/ARTICLES-->
   </div>
@@ -565,5 +555,6 @@
 <script src="assets/js/lenis.min.js" defer></script>
 <script src="assets/js/mesh.js" defer></script>
 <script src="assets/js/main.js" defer></script>
+<script src="assets/js/effects.js" defer></script>
 </body>
 </html>
