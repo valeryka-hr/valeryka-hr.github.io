@@ -52,6 +52,7 @@
     <canvas class="mesh" id="mesh"></canvas>
     <div class="hero__grain"></div>
     <div class="hero__rules"><span></span><span></span><span></span></div>
+    <div class="decos" aria-hidden="true"><img class="deco deco--hero" src="assets/img/deco-ribbon2.webp" width="1600" height="847" alt="" loading="lazy" decoding="async"></div>
   </div>
   <div class="wrap hero__grid">
     <div class="hero__copy">
@@ -72,7 +73,6 @@
         <picture><source type="image/avif" srcset="assets/img/hero-560.avif 560w, assets/img/hero-960.avif 960w" sizes="(max-width: 900px) 62vw, 40vw"><source type="image/webp" srcset="assets/img/hero-560.webp 560w, assets/img/hero-960.webp 960w" sizes="(max-width: 900px) 62vw, 40vw"><img src="assets/img/hero-960.webp" width="960" height="1152" alt="Валерия Кравченко — бизнес-архитектор" fetchpriority="high" decoding="async"></picture>
       </div>
       <div class="portrait__orbit" aria-hidden="true"></div>
-      <picture class="hero__glass" aria-hidden="true"><source type="image/avif" srcset="assets/img/glass-hero.avif"><img src="assets/img/glass-hero.webp" width="560" height="333" alt="" decoding="async"></picture>
       <figcaption class="portrait__tag glass">
         <span class="pulse" aria-hidden="true"></span>
         <span><b>Бизнес-механик</b> на нейронках</span>
@@ -230,22 +230,22 @@
 
 <!-- ============ ИИ-РЕШЕНИЯ ============ -->
 <section class="section ai" id="ai" aria-labelledby="ai-title">
+  <div class="decos" aria-hidden="true"><img class="deco deco--ai" src="assets/img/deco-blob.webp" width="900" height="863" alt="" loading="lazy" decoding="async"><img class="deco deco--ai2" src="assets/img/deco-ribbon.webp" width="1600" height="669" alt="" loading="lazy" decoding="async"></div>
   <div class="wrap">
     <div class="head">
       <p class="eyebrow" data-reveal>ИИ-решения для бизнеса</p>
       <h2 id="ai-title" data-reveal>Сначала порядок в процессах. <em>Потом — ИИ.</em></h2>
-      <p class="head__aside" data-reveal>Ставлю ИИ туда, где он действительно экономит время и деньги. Три решения — у клиента и в моей собственной работе.</p>
+      <p class="head__aside" data-reveal>Ставлю ИИ туда, где он действительно экономит время и деньги. Одно решение работает у клиента, одно — мой рабочий инструмент, одно в обкатке. Похожее соберу под ваш бизнес на заказ.</p>
     </div>
     <div class="bento">
       <article class="tile tile--lead glass" data-reveal>
-        <picture class="tile__glass" aria-hidden="true"><source type="image/avif" srcset="assets/img/glass-ai.avif"><img src="assets/img/glass-ai.webp" width="420" height="301" alt="" loading="lazy" decoding="async"></picture>
         <div class="tile__body">
           <span class="tile__tag tile__tag--live">Работает у клиента</span>
           <h3>Нейропродавец «Лидоруб»</h3>
-          <p>Отвечает клиентам в чате сайта и в Telegram круглосуточно, уточняет задачу, подбирает по каталогу и передаёт менеджеру готовую заявку. Внедрён у поставщика корпоративных подарков, работает на NextBot.</p>
+          <p>Отвечает клиентам в чате сайта и в Telegram круглосуточно, уточняет задачу, подбирает по каталогу и передаёт менеджеру готовую заявку. Внедрён у ГлавПос — поставщика корпоративных подарков и сувениров, работает на NextBot.</p>
           <dl class="stats">
             <div><dt>26 <i>сек</i></dt><dd>первый ответ вместо ~30 минут</dd></div>
-            <div><dt>29<i>%</i></dt><dd>диалогов (18 из 62) — в нерабочее время</dd></div>
+            <div><dt>29<i>%</i></dt><dd>18 из 62 диалогов — в нерабочее время</dd></div>
             <div><dt>8</dt><dd>квалифицированных заявок сохранил бот</dd></div>
           </dl>
           <p class="stats__note">По отчёту о работе бота, выборка — 62 диалога.</p>
@@ -254,18 +254,20 @@
         <div class="tile__flow" aria-label="Как работает нейропродавец"><ol class="rail"><li><b>Клиент пишет</b><span>в чат сайта или Telegram — даже ночью</span></li><li><b>Ответ за секунды</b><span>клиент не уходит к конкуренту</span></li><li><b>Уточняющие вопросы</b><span>зачем, тираж, бюджет, сроки</span></li><li><b>Подбор по каталогу</b><span>и по базе частых вопросов</span></li><li><b>Допродажа</b><span>упаковка, макет, срочная доставка</span></li><li><b>Контакты для CRM</b><span>вся история на виду</span></li><li><b>Передача менеджеру</b><span>горячий клиент с понятной задачей</span></li></ol></div>
       </article>
       <article class="tile tile--diag" data-reveal>
-        <span class="tile__tag">Собственный продукт</span>
+        <span class="tile__tag tile__tag--test">В обкатке</span>
         <h3>Бот-диагност</h3>
-        <p>За несколько минут переписки показывает, где в бизнесе теряются деньги: привлечение заявок, процессы, управление людьми или готовность к ИИ. И подсказывает, с чего начать.</p>
+        <p>Сейчас тестирую. За несколько минут переписки бот расспрашивает о ситуации, находит, где в бизнесе теряются деньги — привлечение заявок, процессы, управление людьми или готовность к ИИ, — и предлагает первые шаги.</p>
+        <p>Похожего бота-диагноста соберу на заказ под ваш бизнес: ваши вопросы, ваша логика, запись к вам на консультацию.</p>
         <div class="tile__flow" aria-label="Как проходит экспресс-диагностика"><ol class="rail"><li><b>Знакомство</b><span>как обращаться, в каком тоне</span></li><li><b>Рассказ о ситуации</b><span>своими словами, без терминов</span></li><li><b>Корень проблемы</b><span>видно, что лечить первым</span></li><li><b>Где теряются деньги</b><span>и что будет, если не менять</span></li><li><b>Первые шаги на 7 дней</b><span>польза сразу</span></li><li><b>Запись на диагностику</b><span>следующий шаг</span></li></ol></div>
-        <button class="tile__btn" type="button" data-request="ИИ-решения" data-message="Хочу пройти экспресс-диагностику.">Пройти экспресс-диагностику <span aria-hidden="true">↗</span></button>
+        <button class="tile__btn" type="button" data-request="ИИ-решения" data-message="Интересен бот-диагност для нашего бизнеса.">Хочу такого бота <span aria-hidden="true">↗</span></button>
       </article>
       <article class="tile tile--wide" data-reveal>
         <div class="tile__body">
-          <span class="tile__tag">Собственный продукт · работает у меня</span>
+          <span class="tile__tag">Мой рабочий инструмент</span>
           <h3>Контент-завод «ПИСАКА»</h3>
-          <p>Из одной идеи — текстом или голосом — делает статью, посты, карусель, иллюстрации и короткое видео. Вы только утверждаете в Telegram, публикация идёт по расписанию. Собран на n8n.</p>
-          <button class="tile__btn" type="button" data-request="ИИ-решения" data-message="Интересен контент-завод для нашей компании.">Хочу такой контент-завод <span aria-hidden="true">↗</span></button>
+          <p>Мой собственный рабочий инструмент: на нём я веду свои каналы. Из одной идеи — текстом или голосом — делает статью, посты, карусель, иллюстрации и короткое видео. Я только утверждаю в Telegram, публикация идёт по расписанию. Собран на n8n.</p>
+          <p>Похожий конвейер соберу на заказ — под ваши темы, голос и площадки.</p>
+          <button class="tile__btn" type="button" data-request="ИИ-решения" data-message="Хочу контент-завод на заказ для нашей компании.">Заказать контент-завод <span aria-hidden="true">↗</span></button>
         </div>
         <div class="pipe" aria-label="Конвейер контент-завода">
           <svg class="pipe__lines" viewBox="0 0 700 240" preserveAspectRatio="none" aria-hidden="true">
@@ -292,6 +294,7 @@
 
 <!-- ============ SERVICES ============ -->
 <section class="section services" id="services" aria-labelledby="srv-title">
+  <div class="decos" aria-hidden="true"><img class="deco deco--srv" src="assets/img/deco-torus.webp" width="1000" height="753" alt="" loading="lazy" decoding="async"></div>
   <div class="wrap">
     <div class="head">
       <p class="eyebrow" data-reveal>Форматы работы</p>
@@ -341,6 +344,7 @@
 
 <!-- ============ STEPS ============ -->
 <section class="section steps" id="steps" aria-labelledby="steps-title">
+  <div class="decos" aria-hidden="true"><img class="deco deco--steps" src="assets/img/deco-ribbon.webp" width="1600" height="669" alt="" loading="lazy" decoding="async"></div>
   <div class="wrap">
     <div class="head">
       <p class="eyebrow" data-reveal>Как начинается работа</p>
@@ -364,6 +368,7 @@
 
 <!-- ============ ABOUT ============ -->
 <section class="section about" id="about" aria-labelledby="about-title">
+  <div class="decos" aria-hidden="true"><img class="deco deco--about" src="assets/img/deco-blob.webp" width="900" height="863" alt="" loading="lazy" decoding="async"></div>
   <div class="wrap about__grid">
     <div class="about__media" data-reveal>
       <figure class="about__photo"><picture><source type="image/avif" srcset="assets/img/about-560.avif 560w, assets/img/about-900.avif 900w" sizes="(max-width: 900px) 90vw, 40vw"><source type="image/webp" srcset="assets/img/about-560.webp 560w, assets/img/about-900.webp 900w" sizes="(max-width: 900px) 90vw, 40vw"><img src="assets/img/about-900.webp" width="900" height="1080" alt="Валерия Кравченко, портрет" loading="lazy" decoding="async"></picture></figure>
@@ -386,7 +391,7 @@
   </div>
   <div class="wrap experience" id="experience">
     <div class="experience__head" data-reveal><p class="eyebrow">Опыт</p><h3>25+ лет: от тренера учебного центра до собственника и практика ИИ</h3></div>
-    <ol class="timeline" data-reveal><li><span class="tl__y">2000–2002</span><div><b>Владивосток</b><p>Тренер учебных центров: программы по продажам и имиджу.</p></div></li><li><span class="tl__y">2002–2005</span><div><b>Москва, розница</b><p>Учебные центры «Arbor Mundi» и сети «Гастроном-Эконом» (11 регионов).</p></div></li><li><span class="tl__y">2005–2007</span><div><b>Опт и дистрибуция</b><p>Системы обучения, оценки и мотивации персонала; антикризисный проект.</p></div></li><li><span class="tl__y">2007–2008</span><div><b>Гроссмарт</b><p>Заместитель директора по персоналу: 14 регионов, рост с 6 до 10 тыс. сотрудников.</p></div></li><li><span class="tl__y">2008–2016</span><div><b>Консалтинг</b><p>Оценка руководителей и перестройка процессов в 5 компаниях: инжиниринг, дистрибуция, розница, оптика.</p></div></li><li><span class="tl__y">с 2011</span><div><b>Color Me Beautiful</b><p>Собственник и генеральный директор дистрибьютора.</p></div></li><li><span class="tl__y">с 2025</span><div><b>Внедрение ИИ</b><p>Нейропродавцы, контент-завод, автоматизация на n8n.</p></div></li></ol>
+    <ol class="timeline" data-reveal><li><span class="tl__y">2000–2002</span><div><b>Владивосток</b><p>Тренер учебных центров: программы по продажам и имиджу.</p></div></li><li><span class="tl__y">2002–2005</span><div><b>Москва, розница</b><p>Учебные центры «Arbor Mundi» и сети «Гастроном-Эконом» (11 регионов). В Arbor Mundi розничные продажи выросли <b class="tl__x">×4</b>.</p></div></li><li><span class="tl__y">2005–2007</span><div><b>Опт и дистрибуция</b><p>Системы обучения, оценки и мотивации персонала; антикризисный проект: чистая прибыль выросла <b class="tl__x">×10</b>.</p></div></li><li><span class="tl__y">2007–2008</span><div><b>Гроссмарт</b><p>Заместитель директора по персоналу: 14 регионов, рост с 6 до 10 тыс. сотрудников.</p></div></li><li><span class="tl__y">2008–2016</span><div><b>Консалтинг</b><p>Оценка руководителей и перестройка процессов в 5 компаниях: инжиниринг, дистрибуция, розница, оптика.</p></div></li><li><span class="tl__y">с 2011</span><div><b>Color Me Beautiful</b><p>Собственник и генеральный директор дистрибьютора.</p></div></li><li><span class="tl__y">с 2025</span><div><b>Внедрение ИИ</b><p>Нейропродавец для ГлавПос, свой контент-завод, автоматизация на n8n.</p></div></li></ol>
     <p class="edu" data-reveal><span>Образование и квалификация</span>Психолог, педагог и тренинг-менеджер: три диплома с отличием, переподготовка ТГУ, с 2025 года — практика внедрения ИИ и n8n.</p>
   </div>
   <div class="wrap">
@@ -452,6 +457,7 @@
 <!-- ============ CONTACT ============ -->
 <section class="contact" id="contact" aria-labelledby="ct-title">
   <div class="contact__glow" aria-hidden="true"></div>
+  <div class="decos" aria-hidden="true"><img class="deco deco--contact" src="assets/img/deco-ribbon2.webp" width="1600" height="847" alt="" loading="lazy" decoding="async"><img class="deco deco--contact2" src="assets/img/deco-torus.webp" width="1000" height="753" alt="" loading="lazy" decoding="async"></div>
   <div class="wrap contact__grid">
     <div class="contact__copy">
       <p class="eyebrow" data-reveal>Начнём с вашей задачи</p>
