@@ -88,7 +88,7 @@
 /* видео «Обо мне»: грузим только по клику */
 (function(){document.querySelectorAll('.vplayer').forEach(function(p){var b=p.querySelector('.vplayer__play');b.addEventListener('click',function(){
 var v=document.createElement('video');v.controls=true;v.playsInline=true;v.setAttribute('playsinline','');v.preload='none';v.poster=p.querySelector('img').currentSrc||p.querySelector('img').src;
-v.width=960;v.height=540;v.setAttribute('aria-label','Выступление на конференции «Терра», февраль 2026');
+v.width=960;v.height=540;v.setAttribute('aria-label','Фрагменты выступлений, 2026');
 var s=document.createElement('source');s.src=p.dataset.src;s.type='video/mp4';v.appendChild(s);
 var t=document.createElement('track');t.kind='subtitles';t.srclang='ru';t.label='Русские субтитры';t.src=p.dataset.vtt;t.default=true;v.appendChild(t);
 p.innerHTML='';p.appendChild(v);p.classList.add('is-playing');
