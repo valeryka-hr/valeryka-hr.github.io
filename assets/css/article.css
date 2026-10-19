@@ -62,3 +62,4 @@
 .art__table thead th{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--lilac);font-weight:600}
 .art__table tbody th{font-weight:600;color:var(--ink);width:24%}
 @media (max-width:760px){.art__gallery{flex-wrap:nowrap}.art__gallery img{width:62vw}}
+.art__body a.cite{color:var(--lilac);text-decoration:underline;text-decoration-color:rgba(205,182,246,.35);text-underline-offset:3px;font-size:.92em}.art__body a.cite:hover{text-decoration-color:var(--lilac)}
